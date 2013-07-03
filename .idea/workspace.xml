@@ -4,10 +4,16 @@
     <list default="true" id="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" name="Default" comment="" />
     <ignored path="BeatOut.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/fragment.js2" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372873397858" ignored="false" />
+    <file path="/fragment.js2" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372884568883" ignored="false" />
     <file path="/BeatOut.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372873329138" ignored="false" />
-    <file path="/StartUp.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372873383238" ignored="false" />
+    <file path="/StartUp.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372875173733" ignored="false" />
     <file path="/BeatOut-app.xml" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372873431268" ignored="false" />
+    <file path="/DemoToneMatrix.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372873822452" ignored="false" />
+    <file path="/AbstractApplication.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372874288785" ignored="false" />
+    <file path="/AbstractStarlingApp.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372875556250" ignored="false" />
+    <file path="/ToneMatrixStarling.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372887210003" ignored="false" />
+    <file path="/Game.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372886612100" ignored="false" />
+    <file path="/EmbeddedAssets.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372885045246" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,21 +83,42 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BeatOut-app.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BeatOut-app.xml">
+      <file leaf-file-name="StartUp.as" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/StartUp.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="109" column="41" selection-start="5297" selection-end="5297" vertical-scroll-proportion="0.0">
+            <state line="57" column="20" selection-start="1577" selection-end="1577" vertical-scroll-proportion="0.5948478">
+              <folding>
+                <element signature="e#173#203#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DemoToneMatrix.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libs/tonfall/src/demo/DemoToneMatrix.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="8" selection-start="931" selection-end="964" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StartUp.as" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/StartUp.as">
+      <file leaf-file-name="EmbeddedAssets.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/EmbeddedAssets.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="86" selection-start="490" selection-end="490" vertical-scroll-proportion="0.36637932">
+            <state line="7" column="45" selection-start="138" selection-end="151" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ToneMatrixStarling.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ToneMatrixStarling.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="192" column="61" selection-start="4724" selection-end="4724" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#172#203#0" expanded="true" />
+                <element signature="e#14#45#0" expanded="true" />
+                <element signature="e#2106#2137#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -109,14 +136,20 @@
       <list>
         <option value="$PROJECT_DIR$/src/BeatOut.as" />
         <option value="$PROJECT_DIR$/BeatOut-app.xml" />
+        <option value="$PROJECT_DIR$/libs/tonfall/src/demo/DemoToneMatrix.as" />
+        <option value="$PROJECT_DIR$/libs/tonfall/src/tonfall/display/AbstractApplication.as" />
+        <option value="$PROJECT_DIR$/src/AbstractStarlingApp.as" />
+        <option value="$PROJECT_DIR$/src/EmbeddedAssets.as" />
+        <option value="$PROJECT_DIR$/src/Game.as" />
+        <option value="$PROJECT_DIR$/src/ToneMatrixStarling.as" />
         <option value="$PROJECT_DIR$/src/StartUp.as" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1920" />
-    <option name="width" value="1920" />
-    <option name="height" value="1200" />
+    <option name="y" value="22" />
+    <option name="width" value="1440" />
+    <option name="height" value="798" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -146,7 +179,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -193,20 +225,61 @@
               <option name="myItemId" value="libs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tonfall" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BeatOut" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BeatOut" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tonfall" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BeatOut" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BeatOut" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Beatlove" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -215,11 +288,11 @@
     <property name="GoToClass.includeLibraries" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/libs" />
-    </key>
     <key name="CreateActionScriptClassDialog.DESTINATION_PACKAGE_RECENT_KEY">
       <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/libs" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -253,6 +326,19 @@
       <option name="trusted" value="true" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -279,19 +365,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -418,7 +491,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1920" y="0" width="1920" height="1200" extended-state="6" />
+    <frame x="0" y="22" width="1440" height="798" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -439,8 +512,8 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18303095" sideWeight="0.6703704" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32962963" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21664275" sideWeight="0.67109144" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32890856" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -513,9 +586,108 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/libs/tonfall/src/demo/DemoToneMatrix.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="154" column="64" selection-start="3378" selection-end="3378" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ToneMatrixStarling.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="91" selection-start="1404" selection-end="1404" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#14#45#0" expanded="true" />
+            <element signature="e#2106#2137#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AbstractStarlingApp.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="76" selection-start="1428" selection-end="1428" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/libs/starling/src/com/adobe/utils/AGALMiniAssembler.as">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/tonfall/src/test/poly/SimplePolySynthVoiceFactory.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/tonfall/src/tonfall/display/AbstractApplication.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="8" selection-start="1502" selection-end="1728" vertical-scroll-proportion="0.28879312">
+          <folding>
+            <element signature="e#27#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BeatOut-app.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="109" column="41" selection-start="5297" selection-end="5297" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/starling/src/starling/display/DisplayObjectContainer.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="102" column="0" selection-start="4246" selection-end="4246" vertical-scroll-proportion="0.33333334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/starling/src/starling/display/Button.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.2801724">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EmbeddedAssets.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="45" selection-start="138" selection-end="151" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Game.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="31" selection-start="204" selection-end="204" vertical-scroll-proportion="0.10538641">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AbstractStarlingApp.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="76" selection-start="1428" selection-end="1428" vertical-scroll-proportion="0.05386417">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ToneMatrixStarling.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="192" column="61" selection-start="4724" selection-end="4724" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#14#45#0" expanded="true" />
+            <element signature="e#2106#2137#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/tonfall/src/demo/DemoToneMatrix.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="8" selection-start="931" selection-end="964" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -527,18 +699,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BeatOut-app.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="41" selection-start="5297" selection-end="5297" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/StartUp.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="86" selection-start="490" selection-end="490" vertical-scroll-proportion="0.36637932">
+        <state line="57" column="20" selection-start="1577" selection-end="1577" vertical-scroll-proportion="0.5948478">
           <folding>
-            <element signature="e#172#203#0" expanded="true" />
+            <element signature="e#173#203#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -595,11 +760,12 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>BeatOut|BeatOut</last-edited>
+          <last-edited>BeatOut</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>

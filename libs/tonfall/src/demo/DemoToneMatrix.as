@@ -26,6 +26,7 @@ package demo
 		
 		private var _container: Sprite;
 		private var _selectMode: Boolean;
+
 		
 		public function DemoToneMatrix()
 		{
