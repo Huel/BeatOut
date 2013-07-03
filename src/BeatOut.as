@@ -1,13 +1,19 @@
-package {
+package
+{
 
 import flash.display.Sprite;
-import flash.text.TextField;
+import starling.core.Starling;
 
-public class BeatOut extends Sprite {
-    public function BeatOut() {
-        var textField:TextField = new TextField();
-        textField.text = "Hello, World";
-        addChild(textField);
+[SWF(width="1200", height="800", frameRate="60", backgroundColor="#000000")]
+
+public class BeatOut extends Sprite
+{
+    private var _starling:Starling;
+
+    public function BeatOut()
+    {
+        _starling = new Starling(StartUp, stage);
+        _starling.start();
     }
 }
 }
