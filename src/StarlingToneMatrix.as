@@ -1,6 +1,10 @@
 package
 {
-    import starling.display.Sprite;
+import interfaces.IToneMatrix;
+
+import starling.display.Button;
+
+import starling.display.Sprite;
     import starling.events.Event;
     import test.effects.Delay;
     import test.poly.SimplePolySynthVoiceFactory;
@@ -8,7 +12,7 @@ package
     import tonfall.core.TimeConversion;
     import tonfall.prefab.poly.PolySynth;
 
-public class StarlingToneMatrix extends AbstractStarlingApp
+public class StarlingToneMatrix extends AbstractStarlingApp implements IToneMatrix
 {
     private const sequencer : TonematrixSequencer = new TonematrixSequencer();
     private const generator : PolySynth = new PolySynth( SimplePolySynthVoiceFactory.INSTANCE );
@@ -16,7 +20,7 @@ public class StarlingToneMatrix extends AbstractStarlingApp
 
     private var _container: Sprite;
     public var _selectMode: Boolean;
-    public var currentStep: int;
+    public var currentStep: int = 0;
 
     public function StarlingToneMatrix()
     {
@@ -37,7 +41,7 @@ public class StarlingToneMatrix extends AbstractStarlingApp
         engine.input = delay.signalOutput;
     }
 
-    public function changePattern( u: int, v: int, value: Boolean ): void
+    public function setPosition( u: int, v: int, value: Boolean ): void
     {
         sequencer.pattern[u][v] = value;
     }
@@ -61,6 +65,12 @@ public class StarlingToneMatrix extends AbstractStarlingApp
                 _container.addChild( button );
             }
         }
+
+    }
+
+    private function clearing(event:Event):void
+    {
+        clear();
     }
 
     override protected function resize( event : Event = null ) : void
@@ -72,6 +82,22 @@ public class StarlingToneMatrix extends AbstractStarlingApp
         }
     }
 
+
+    public function getCurrentSequencerPosition():int
+    {
+        return this.currentStep;
+    }
+
+    public function clear():void
+    {
+        for( var u: int = 0 ; u < 16 ; ++u )
+        {
+            for( var v: int = 0 ; v < 16 ; ++v )
+            {
+               sequencer.pattern [u][v] = false;
+            }
+        }
+    }
 }
 }
 
@@ -110,7 +136,7 @@ final class SequencerButton extends Button
     {
         this.selected = Game.sequencer._selectMode = !this.selected;
 
-        Game.sequencer.changePattern( this.u, this.v, this.selected );
+        Game.sequencer.setPosition( this.u, this.v, this.selected );
     }
 
     public function get u() : int
@@ -132,7 +158,6 @@ final class SequencerButton extends Button
     public function set selected( selected : Boolean ) : void
     {
         _selected = selected;
-
         update();
     }
 
@@ -164,6 +189,7 @@ final class TonematrixSequencer extends Processor
         var index: int = int( info.barFrom * 16.0 );
         var position: Number = index / 16.0;
 
+        //trace(Game.sequencer.cleard);
 
         while( position < info.barTo )
         {
@@ -175,7 +201,6 @@ final class TonematrixSequencer extends Processor
                     if(pattern[index%16][i])
                     {
                         var event: TimeEventNote = new TimeEventNote();
-
                         event.barPosition = position;
                         event.note = ToneMatrixNotes[i];
                         event.barDuration = 1.0/16.0;
