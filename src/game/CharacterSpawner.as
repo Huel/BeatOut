@@ -47,7 +47,7 @@ public class CharacterSpawner {
     public function getNext()
     {
         var level = Randomize();
-        return CharacterFactory.getCharacter(level);
+        return CharacterFactory.fromString(level);
     }
 }
 }

@@ -9,7 +9,11 @@ package game {
 import flash.display.Screen;
 import flash.geom.Point;
 
+import game.Character;
+
 import interfaces.IToneMatrix;
+
+import org.osmf.elements.compositeClasses.SerialElementSegment;
 
 import starling.display.Sprite;
 import starling.events.TouchEvent;
@@ -22,7 +26,7 @@ public class GameBoard extends Sprite {
 
     public var tiles:Array = new Array();
     private var _toneMatrix:IToneMatrix;
-    private var _tilePreview:TilePreview;
+    private var _characterPreview:TilePreview;
 
     public function GameBoard() {
 
@@ -37,10 +41,10 @@ public class GameBoard extends Sprite {
             }
         }
 
-        _tilePreview = new TilePreview();
-        _tilePreview.x = 600;
-        _tilePreview.y = 600;
-        addChild(_tilePreview);
+        _characterPreview = new TilePreview();
+        _characterPreview.x = 600;
+        _characterPreview.y = 600;
+        addChild(_characterPreview);
     }
 
     private function SetTile(x:int, y:int, tile:Tile):void {
@@ -69,11 +73,74 @@ public class GameBoard extends Sprite {
 
     private function onTileTouch(event:TileTouchEvent):void {
         var tile:Tile = event.target as Tile;
-        trace("Tile: " + tile);
-        var pos:Point = tile.getPosition();
-        var next:Tile = _tilePreview.next;
-        SetTile(pos.x, pos.y, next);
-        _tilePreview.moveOn();
+        if (tile is EmptyTile)
+        {
+            PlayTile(tile.getPosition().x, tile.getPosition().y,_characterPreview.next);
+            _characterPreview.moveOn();
+        }
+    }
+
+    private function PlayTile(x:int, y:int, tile:Tile):void {
+
+        var character:Character = tile as Character;
+        var equalNeighbours:Array = GetEqualNeighbours(x,y,character.level, true);
+
+        if (equalNeighbours.length >= 2)
+        {
+            // join neighbours
+            for each (var character:Character in equalNeighbours)
+            {
+                SetTile(character.getPosition().x, character.getPosition().y, new EmptyTile());
+            }
+            var pumpedUpTile = CharacterFactory.fromInt(character.level+1);
+            SetTile(x,y, pumpedUpTile);
+        }
+        else
+        {
+            SetTile(x,y,tile);
+        }
+//        SetTile(x,y,tile);
+    }
+
+    private function GetEqualNeighbours(x:int, y:int, level:int, recurse:Boolean):Array {
+        var neighbours:Array = new Array();
+        var left:int = Math.max(0,x-1);
+        var right:int = Math.min(COLUMNS, x+1);
+        var up:int = Math.max(0, y-1);
+        var down:int = Math.min(ROWS, y+1);
+
+        var inspectedTiles:Array = new Array(
+            new Point(x, up),
+            new Point(x, down),
+            new Point(left, y),
+            new Point(right, y)
+        );
+
+        for each (var pt:Point in inspectedTiles)
+        {
+            if (pt.x == x && pt.y == y) continue;
+            var inspected:Tile = tiles[pt.x][pt.y];
+            if (inspected is Character)
+            {
+                var character:Character = inspected as Character;
+                if (character.level == level)
+                {
+                    if (recurse)
+                    {
+                        var neighbourNeighbours =
+                                GetEqualNeighbours(character.getPosition().x, character.getPosition().y, level, false);
+                        for each (var nn:Character in neighbourNeighbours)
+                        {
+                            neighbours.push(nn);
+                        }
+                    }
+                    neighbours.push(character);
+                }
+            }
+        }
+
+        return neighbours;
+
     }
 
     private function SetTone(x:int, y:int, tile:Tile):void {

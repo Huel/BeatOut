@@ -18,11 +18,11 @@
     <file path="/IToneMatrix.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372939954337" ignored="false" />
     <file path="/Character.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372944001507" ignored="false" />
     <file path="/Level1Character.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372930444637" ignored="false" />
-    <file path="/GameBoard.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372943882741" ignored="false" />
+    <file path="/GameBoard.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372948940665" ignored="false" />
     <file path="/ITile.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372944370092" ignored="false" />
     <file path="/EmptyTile.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372944008048" ignored="false" />
     <file path="/CharacterSpawner.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372942055369" ignored="false" />
-    <file path="/CharacterFactory.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372941042188" ignored="false" />
+    <file path="/CharacterFactory.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372945610775" ignored="false" />
     <file path="/a.dummy" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372943541650" ignored="false" />
     <file path="/MockToneMatrix.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372940449936" ignored="false" />
     <file path="/TilePreview.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372943530850" ignored="false" />
@@ -88,10 +88,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="BeatOut.as" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="BeatOut.as" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/BeatOut.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="42" selection-start="303" selection-end="303" vertical-scroll-proportion="0.42682928">
+            <state line="17" column="48" selection-start="386" selection-end="386" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#11#39#0" expanded="true" />
               </folding>
@@ -124,7 +124,7 @@
       <file leaf-file-name="Tile.as" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/game/Tile.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="59" selection-start="724" selection-end="724" vertical-scroll-proportion="0.0">
+            <state line="39" column="14" selection-start="964" selection-end="964" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#168#192#0" expanded="true" />
               </folding>
@@ -141,11 +141,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameBoard.as" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="GameBoard.as" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/game/GameBoard.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="86" column="64" selection-start="2389" selection-end="2389" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="132" column="43" selection-start="3999" selection-end="3999" vertical-scroll-proportion="0.77922076">
+              <folding>
+                <element signature="e#168#196#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -173,7 +175,7 @@
       <file leaf-file-name="CharacterFactory.as" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/game/CharacterFactory.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="9" selection-start="649" selection-end="649" vertical-scroll-proportion="0.0">
+            <state line="36" column="9" selection-start="1117" selection-end="1117" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -211,17 +213,17 @@
         <option value="$PROJECT_DIR$/src/Game.as" />
         <option value="$PROJECT_DIR$/src/interfaces/IToneMatrix.as" />
         <option value="$PROJECT_DIR$/src/game/MockToneMatrix.as" />
-        <option value="$PROJECT_DIR$/src/game/CharacterFactory.as" />
         <option value="$PROJECT_DIR$/src/game/CharacterSpawner.as" />
         <option value="$PROJECT_DIR$/src/game/ITile.as" />
         <option value="$PROJECT_DIR$/src/game/TilePreview.as" />
         <option value="$PROJECT_DIR$/src/game/TileTouchEvent.as" />
-        <option value="$PROJECT_DIR$/src/game/GameBoard.as" />
         <option value="$PROJECT_DIR$/src/game/Character.as" />
         <option value="$PROJECT_DIR$/src/game/EmptyTile.as" />
         <option value="$PROJECT_DIR$/src/game/Tile.as" />
         <option value="$PROJECT_DIR$/BeatOut-app.xml" />
         <option value="$PROJECT_DIR$/src/BeatOut.as" />
+        <option value="$PROJECT_DIR$/src/game/CharacterFactory.as" />
+        <option value="$PROJECT_DIR$/src/game/GameBoard.as" />
       </list>
     </option>
   </component>
@@ -419,7 +421,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Flash App.BeatOut Device">
+  <component name="RunManager" selected="Flash App.BeatOut">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -629,7 +631,9 @@
       <option name="url" value="http://" />
       <option name="usbDebugPort" value="7936" />
       <RunnerSettings RunnerId="FlexDebugRunner" />
+      <RunnerSettings RunnerId="FlexRunner" />
       <ConfigurationWrapper RunnerId="FlexDebugRunner" />
+      <ConfigurationWrapper RunnerId="FlexRunner" />
       <method />
     </configuration>
     <list size="2">
@@ -692,27 +696,27 @@
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32964602" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39933628" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32964602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39933628" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32964602" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32986537" sideWeight="0.6006637" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32853982" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32986537" sideWeight="0.6006637" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32853982" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32964602" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18482251" sideWeight="0.6006637" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.249694" sideWeight="0.6006637" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24778761" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18482251" sideWeight="0.7522124" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.249694" sideWeight="0.7522124" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24778761" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -829,13 +833,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/CharacterFactory.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="9" selection-start="649" selection-end="649" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/game/CharacterSpawner.as">
       <provider selected="true" editor-type-id="text-editor">
         <state line="32" column="0" selection-start="773" selection-end="773" vertical-scroll-proportion="0.0">
@@ -853,6 +850,15 @@
     <entry file="file://$PROJECT_DIR$/src/game/Character.as">
       <provider selected="true" editor-type-id="text-editor">
         <state line="30" column="21" selection-start="734" selection-end="734" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#168#192#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/Tile.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="14" selection-start="964" selection-end="964" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#168#192#0" expanded="true" />
           </folding>
@@ -877,19 +883,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/GameBoard.as">
+    <entry file="file://$PROJECT_DIR$/src/game/CharacterFactory.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="64" selection-start="2389" selection-end="2389" vertical-scroll-proportion="0.0">
+        <state line="36" column="9" selection-start="1117" selection-end="1117" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/Tile.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="59" selection-start="724" selection-end="724" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#168#192#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -902,9 +899,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BeatOut.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="42" selection-start="303" selection-end="303" vertical-scroll-proportion="0.42682928">
+        <state line="17" column="48" selection-start="386" selection-end="386" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#11#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/GameBoard.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="132" column="43" selection-start="3999" selection-end="3999" vertical-scroll-proportion="0.77922076">
+          <folding>
+            <element signature="e#168#196#0" expanded="true" />
           </folding>
         </state>
       </provider>

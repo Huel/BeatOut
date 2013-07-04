@@ -8,7 +8,7 @@
 package game {
 public class CharacterFactory {
 
-    public static function getCharacter(level:String):Character
+    public static function fromString(level:String):Character
     {
         switch (level)
         {
@@ -21,6 +21,20 @@ public class CharacterFactory {
         }
 
         return null;
+    }
+
+    public static function fromInt(level:int):Character
+    {
+        switch (level)
+        {
+            case 1:
+                return new Character(1, 1, StartUp.assets.getTexture("Level1Tile"));
+            case 2:
+                return new Character(2, 2, StartUp.assets.getTexture("Level2Tile"));
+            case 3:
+            default:
+                return new Character(3, 3, StartUp.assets.getTexture("Level3Tile"));
+        }
     }
 }
 }
