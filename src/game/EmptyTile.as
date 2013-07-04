@@ -14,20 +14,17 @@ import starling.display.Sprite;
 import starling.textures.Texture;
 import starling.display.DisplayObject;
 
-public class EmptyTile implements ITile {
+public class EmptyTile extends Tile{
 
-    private var _view : DisplayObject;
+    private var _position : Point;
 
     public function EmptyTile() {
         _view = new Image(StartUp.assets.getTexture("EmptyTile"));
+        initialize();
     }
 
-    public function getToneAmount():int {
+    override public function getToneAmount():int {
         return 0;
-    }
-
-    public function getView():DisplayObject{
-        return _view;
     }
 }
 }

@@ -17,11 +17,10 @@ import starling.display.Sprite;
 import starling.textures.RenderTexture;
 import starling.textures.Texture;
 
-public class Character implements ITile{
+public class Character extends Tile{
 
     private var _amountOfTones:int;
     public var level:int;
-    private var _view:DisplayObject;
 
     public function Character(amountOfTones:int, level:int, view:Texture)
     {
@@ -29,14 +28,7 @@ public class Character implements ITile{
         this._amountOfTones = amountOfTones;
         this.level = level;
         this._view = new Image(view);
-    }
-
-    public function getToneAmount():int {
-        return _amountOfTones;
-    }
-
-    public function getView():DisplayObject {
-        return _view;
+        initialize();
     }
 }
 }

@@ -12,23 +12,20 @@ import starling.events.TouchEvent;
 
 public class TilePreview extends Sprite{
 
-    private var _next:ITile;
-    public var selected:ITile;
+    public var next:Tile;
     private var _characterSpawner:CharacterSpawner;
 
     public function TilePreview() {
         _characterSpawner = new CharacterSpawner();
-        _next = _characterSpawner.getNext();
-        addChild(_next.getView());
-
-        addEventListener(TouchEvent.TOUCH, onTouched);
+        next = _characterSpawner.getNext();
+        addChild(next.getView());
     }
 
-    private function onTouched(event:TouchEvent):void {
-       removeChild(_next.getView());
-       selected = _next;
-       _next = _characterSpawner.getNext();
-       addChild(_next.getView());
+    public function moveOn():void {
+       removeChild(next.getView());
+//       selected = next;
+       next = _characterSpawner.getNext();
+       addChild(next.getView());
     }
 
 
