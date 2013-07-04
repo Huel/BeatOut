@@ -4,7 +4,7 @@
     <list default="true" id="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" name="Default" comment="" />
     <ignored path="BeatOut.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/fragment.js2" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372884568883" ignored="false" />
+    <file path="/fragment.js2" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372940476979" ignored="false" />
     <file path="/BeatOut.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372873329138" ignored="false" />
     <file path="/StartUp.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372875173733" ignored="false" />
     <file path="/BeatOut-app.xml" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372873431268" ignored="false" />
@@ -12,8 +12,20 @@
     <file path="/AbstractApplication.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372874288785" ignored="false" />
     <file path="/AbstractStarlingApp.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372875556250" ignored="false" />
     <file path="/ToneMatrixStarling.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372887210003" ignored="false" />
-    <file path="/Game.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372886612100" ignored="false" />
-    <file path="/EmbeddedAssets.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372885045246" ignored="false" />
+    <file path="/Game.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372937624904" ignored="false" />
+    <file path="/EmbeddedAssets.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372932671117" ignored="false" />
+    <file path="/Dummy.txt" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372928007287" ignored="false" />
+    <file path="/IToneMatrix.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372939954337" ignored="false" />
+    <file path="/Character.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372937295956" ignored="false" />
+    <file path="/Level1Character.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372930444637" ignored="false" />
+    <file path="/GameBoard.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372941008030" ignored="false" />
+    <file path="/ITile.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372936568000" ignored="false" />
+    <file path="/EmptyTile.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372937522941" ignored="false" />
+    <file path="/CharacterSpawner.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372942055369" ignored="false" />
+    <file path="/CharacterFactory.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372941042188" ignored="false" />
+    <file path="/a.dummy" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372932688659" ignored="false" />
+    <file path="/MockToneMatrix.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372940449936" ignored="false" />
+    <file path="/TilePreview.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372942173098" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +40,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -64,7 +77,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -74,58 +86,100 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="BeatOut.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/BeatOut.as">
+      <file leaf-file-name="Game.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Game.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="41" selection-start="347" selection-end="347" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StartUp.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/StartUp.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="62" selection-start="1600" selection-end="1600" vertical-scroll-proportion="0.0">
+            <state line="24" column="0" selection-start="509" selection-end="509" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#173#203#0" expanded="true" />
+                <element signature="e#173#195#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Game.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Game.as">
+      <file leaf-file-name="Character.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/game/Character.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="56" selection-start="361" selection-end="361" vertical-scroll-proportion="0.0">
+            <state line="21" column="24" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#168#192#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameBoard.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/game/GameBoard.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="45" column="2" selection-start="1087" selection-end="1087" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#168#196#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TilePreview.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/game/TilePreview.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="33" selection-start="848" selection-end="848" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#167#198#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CharacterFactory.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/game/CharacterFactory.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="33" selection-start="649" selection-end="649" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DemoToneMatrix.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/libs/tonfall/src/demo/DemoToneMatrix.as">
+      <file leaf-file-name="CharacterSpawner.as" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/game/CharacterSpawner.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="8" selection-start="931" selection-end="964" vertical-scroll-proportion="0.0">
+            <state line="27" column="12" selection-start="652" selection-end="652" vertical-scroll-proportion="0.5007949">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EmbeddedAssets.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/EmbeddedAssets.as">
+      <file leaf-file-name="IToneMatrix.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/interfaces/IToneMatrix.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="45" selection-start="138" selection-end="151" vertical-scroll-proportion="0.0">
+            <state line="16" column="71" selection-start="404" selection-end="404" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ToneMatrixStarling.as" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="EmptyTile.png" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/textures/EmptyTile.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ToneMatrixStarling.as" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ToneMatrixStarling.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="173" column="84" selection-start="4235" selection-end="4235" vertical-scroll-proportion="0.42835367">
+            <state line="94" column="5" selection-start="2464" selection-end="2464" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MockToneMatrix.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/game/MockToneMatrix.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="4" selection-start="281" selection-end="281" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#167#197#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -137,28 +191,42 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/BeatOut.as" />
-        <option value="$PROJECT_DIR$/BeatOut-app.xml" />
-        <option value="$PROJECT_DIR$/libs/tonfall/src/demo/DemoToneMatrix.as" />
-        <option value="$PROJECT_DIR$/libs/tonfall/src/tonfall/display/AbstractApplication.as" />
-        <option value="$PROJECT_DIR$/src/AbstractStarlingApp.as" />
-        <option value="$PROJECT_DIR$/src/EmbeddedAssets.as" />
         <option value="$PROJECT_DIR$/src/ToneMatrixStarling.as" />
         <option value="$PROJECT_DIR$/src/StartUp.as" />
+        <option value="$PROJECT_DIR$/src/game/Entity.as" />
+        <option value="$PROJECT_DIR$/src/game/Level2Character.as" />
+        <option value="$PROJECT_DIR$/src/game/Level1Character.as" />
+        <option value="$PROJECT_DIR$/src/EmbeddedAssets.as" />
+        <option value="$PROJECT_DIR$/src/game/ITile.as" />
+        <option value="$PROJECT_DIR$/src/game/Character.as" />
+        <option value="$PROJECT_DIR$/src/game/EmptyTile.as" />
         <option value="$PROJECT_DIR$/src/Game.as" />
+        <option value="$PROJECT_DIR$/src/interfaces/IToneMatrix.as" />
+        <option value="$PROJECT_DIR$/src/game/MockToneMatrix.as" />
+        <option value="$PROJECT_DIR$/src/game/GameBoard.as" />
+        <option value="$PROJECT_DIR$/src/game/CharacterFactory.as" />
+        <option value="$PROJECT_DIR$/src/game/TilePreview.as" />
+        <option value="$PROJECT_DIR$/src/game/CharacterSpawner.as" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-96" />
     <option name="y" value="22" />
-    <option name="width" value="1440" />
-    <option name="height" value="804" />
+    <option name="width" value="1680" />
+    <option name="height" value="1024" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -186,8 +254,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -230,11 +296,61 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interfaces" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BeatOut" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BeatOut" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BeatOut" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BeatOut" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BeatOut" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BeatOut" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="libs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tonfall" />
+              <option name="myItemId" value="starling" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -252,30 +368,18 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
+              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tonfall" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BeatOut" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BeatOut" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
+              <option name="myItemId" value="textures" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -283,6 +387,8 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src" />
     <property name="project.structure.proportion" value="0.15" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.lastSelected" value="editor.preferences.appearance" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Beatlove" />
@@ -293,13 +399,17 @@
     <property name="restartRequiresConfirmation" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateActionScriptClassDialog.DESTINATION_PACKAGE_RECENT_KEY">
-      <recent name="" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/libs" />
+    </key>
+    <key name="CreateActionScriptClassDialog.DESTINATION_PACKAGE_RECENT_KEY">
+      <recent name="game" />
+      <recent name="interfaces" />
+      <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -333,6 +443,19 @@
       <option name="trusted" value="true" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -359,19 +482,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -489,6 +599,23 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="sslv3">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" name="Default" comment="" />
@@ -497,34 +624,54 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-96" y="22" width="1440" height="804" extended-state="0" />
+    <frame x="0" y="22" width="1680" height="1024" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32964602" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32964602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32986537" sideWeight="0.7522124" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32853982" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32964602" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18482251" sideWeight="0.7522124" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24778761" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21664275" sideWeight="0.67109144" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32863188" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962963" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -595,100 +742,126 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/libs/tonfall/src/demo/DemoToneMatrix.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="154" column="64" selection-start="3378" selection-end="3378" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ToneMatrixStarling.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="91" selection-start="1404" selection-end="1404" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AbstractStarlingApp.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="76" selection-start="1428" selection-end="1428" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/starling/src/com/adobe/utils/AGALMiniAssembler.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/tonfall/src/test/poly/SimplePolySynthVoiceFactory.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/tonfall/src/tonfall/display/AbstractApplication.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="8" selection-start="1502" selection-end="1728" vertical-scroll-proportion="0.28879312" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BeatOut-app.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="41" selection-start="5297" selection-end="5297" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/starling/src/starling/display/DisplayObjectContainer.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="0" selection-start="4246" selection-end="4246" vertical-scroll-proportion="0.33333334" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/starling/src/starling/display/Button.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.2801724" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AbstractStarlingApp.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="76" selection-start="1428" selection-end="1428" vertical-scroll-proportion="0.05386417" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BeatOut.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="41" selection-start="347" selection-end="347" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/StartUp.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="62" selection-start="1600" selection-end="1600" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#173#203#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/tonfall/src/demo/DemoToneMatrix.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="8" selection-start="931" selection-end="964" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Game.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="56" selection-start="361" selection-end="361" vertical-scroll-proportion="0.0">
+        <state line="27" column="8" selection-start="931" selection-end="964" vertical-scroll-proportion="0.034722224">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/EmbeddedAssets.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="45" selection-start="138" selection-end="151" vertical-scroll-proportion="0.0">
+        <state line="14" column="51" selection-start="391" selection-end="391" vertical-scroll-proportion="-8.076923">
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/ITile.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="233" selection-end="233" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#168#192#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BeatOut.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="1" selection-start="347" selection-end="347" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#11#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/EmptyTile.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="43" selection-start="633" selection-end="633" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#168#192#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StartUp.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="5" selection-start="1600" selection-end="1600" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Game.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="0" selection-start="509" selection-end="509" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#173#195#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/interfaces/IToneMatrix.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="71" selection-start="404" selection-end="404" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/MockToneMatrix.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="4" selection-start="281" selection-end="281" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#167#197#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/textures/EmptyTile.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ToneMatrixStarling.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="173" column="84" selection-start="4235" selection-end="4235" vertical-scroll-proportion="0.42835367">
+        <state line="94" column="5" selection-start="2464" selection-end="2464" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/Character.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="24" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#168#192#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/GameBoard.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="2" selection-start="1087" selection-end="1087" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#168#196#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/CharacterFactory.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="33" selection-start="649" selection-end="649" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/TilePreview.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="33" selection-start="848" selection-end="848" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#167#198#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/CharacterSpawner.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="12" selection-start="652" selection-end="652" vertical-scroll-proportion="0.5007949">
           <folding />
         </state>
       </provider>
@@ -745,12 +918,11 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>BeatOut</last-edited>
+          <last-edited>BeatOut|BeatOut</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
