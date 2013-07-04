@@ -22,7 +22,7 @@
     <file path="/ITile.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372944370092" ignored="false" />
     <file path="/EmptyTile.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372944008048" ignored="false" />
     <file path="/CharacterSpawner.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372942055369" ignored="false" />
-    <file path="/CharacterFactory.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372945610775" ignored="false" />
+    <file path="/CharacterFactory.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372949106422" ignored="false" />
     <file path="/a.dummy" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372943541650" ignored="false" />
     <file path="/MockToneMatrix.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372940449936" ignored="false" />
     <file path="/TilePreview.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372943530850" ignored="false" />
@@ -99,13 +99,40 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Character.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/game/Character.as">
+      <file leaf-file-name="StartUp.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/StartUp.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="21" selection-start="734" selection-end="734" vertical-scroll-proportion="0.0">
+            <state line="59" column="5" selection-start="1600" selection-end="1600" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Game.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Game.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="0" selection-start="509" selection-end="509" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#168#192#0" expanded="true" />
+                <element signature="e#173#195#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EmbeddedAssets.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/EmbeddedAssets.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="42" selection-start="266" selection-end="267" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CharacterSpawner.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/game/CharacterSpawner.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="7" selection-start="721" selection-end="721" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -114,17 +141,6 @@
         <entry file="file://$PROJECT_DIR$/src/game/EmptyTile.as">
           <provider selected="true" editor-type-id="text-editor">
             <state line="22" column="21" selection-start="528" selection-end="528" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#168#192#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Tile.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/game/Tile.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="14" selection-start="964" selection-end="964" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#168#192#0" expanded="true" />
               </folding>
@@ -144,19 +160,10 @@
       <file leaf-file-name="GameBoard.as" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/game/GameBoard.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="132" column="43" selection-start="3999" selection-end="3999" vertical-scroll-proportion="0.77922076">
+            <state line="57" column="31" selection-start="1511" selection-end="1511" vertical-scroll-proportion="0.8035714">
               <folding>
                 <element signature="e#168#196#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TileTouchEvent.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/game/TileTouchEvent.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="18" selection-start="261" selection-end="261" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -175,16 +182,7 @@
       <file leaf-file-name="CharacterFactory.as" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/game/CharacterFactory.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="9" selection-start="1117" selection-end="1117" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CharacterSpawner.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/game/CharacterSpawner.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="0" selection-start="773" selection-end="773" vertical-scroll-proportion="0.0">
+            <state line="31" column="51" selection-start="903" selection-end="903" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -209,11 +207,9 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/src/game/Level1Character.as" />
-        <option value="$PROJECT_DIR$/src/EmbeddedAssets.as" />
         <option value="$PROJECT_DIR$/src/Game.as" />
         <option value="$PROJECT_DIR$/src/interfaces/IToneMatrix.as" />
         <option value="$PROJECT_DIR$/src/game/MockToneMatrix.as" />
-        <option value="$PROJECT_DIR$/src/game/CharacterSpawner.as" />
         <option value="$PROJECT_DIR$/src/game/ITile.as" />
         <option value="$PROJECT_DIR$/src/game/TilePreview.as" />
         <option value="$PROJECT_DIR$/src/game/TileTouchEvent.as" />
@@ -222,8 +218,10 @@
         <option value="$PROJECT_DIR$/src/game/Tile.as" />
         <option value="$PROJECT_DIR$/BeatOut-app.xml" />
         <option value="$PROJECT_DIR$/src/BeatOut.as" />
-        <option value="$PROJECT_DIR$/src/game/CharacterFactory.as" />
         <option value="$PROJECT_DIR$/src/game/GameBoard.as" />
+        <option value="$PROJECT_DIR$/src/game/CharacterFactory.as" />
+        <option value="$PROJECT_DIR$/src/EmbeddedAssets.as" />
+        <option value="$PROJECT_DIR$/src/game/CharacterSpawner.as" />
       </list>
     </option>
   </component>
@@ -789,29 +787,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/StartUp.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="5" selection-start="1600" selection-end="1600" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Game.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="509" selection-end="509" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#173#195#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/interfaces/IToneMatrix.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="71" selection-start="404" selection-end="404" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/game/MockToneMatrix.as">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="0" selection-start="281" selection-end="281" vertical-scroll-proportion="0.0">
@@ -829,13 +804,6 @@
     <entry file="file://$PROJECT_DIR$/src/ToneMatrixStarling.as">
       <provider selected="true" editor-type-id="text-editor">
         <state line="94" column="5" selection-start="2464" selection-end="2464" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/CharacterSpawner.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="0" selection-start="773" selection-end="773" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -883,13 +851,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/CharacterFactory.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="9" selection-start="1117" selection-end="1117" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BeatOut-app.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="92" column="30" selection-start="4423" selection-end="4423" vertical-scroll-proportion="0.0">
@@ -906,9 +867,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/StartUp.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="5" selection-start="1600" selection-end="1600" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Game.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="0" selection-start="509" selection-end="509" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#173#195#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EmbeddedAssets.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="42" selection-start="266" selection-end="267" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/CharacterSpawner.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="7" selection-start="721" selection-end="721" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/CharacterFactory.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="51" selection-start="903" selection-end="903" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/game/GameBoard.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="132" column="43" selection-start="3999" selection-end="3999" vertical-scroll-proportion="0.77922076">
+        <state line="57" column="31" selection-start="1511" selection-end="1511" vertical-scroll-proportion="0.8035714">
           <folding>
             <element signature="e#168#196#0" expanded="true" />
           </folding>

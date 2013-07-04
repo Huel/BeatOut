@@ -16,6 +16,9 @@ package
             [Embed(source="/../assets/textures/Level3Tile.png")]
             public static const Level3Tile:Class;
 
+            [Embed(source="/../assets/textures/Level4Tile.png")]
+            public static const Level4Tile:Class;
+
             [Embed(source="/../assets/textures/EmptyTile.png")]
             public static const EmptyTile:Class;
 
