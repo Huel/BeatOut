@@ -90,7 +90,7 @@
         <!--<maxSize></maxSize>-->
 
         <!-- The aspect ratio of the app ("portrait" or "landscape" or "any"). Optional. Mobile only. Default is the natural orientation of the device -->
-        <!--<aspectRatio></aspectRatio>-->
+        <aspectRatio>landscape</aspectRatio>
 
         <!-- Whether the app will begin auto-orienting on launch. Optional. Mobile only. Default false -->
         <autoOrients>true</autoOrients>
@@ -218,7 +218,7 @@
         <manifestAdditions>
             <![CDATA[
             <manifest android:installLocation="auto">
-                <!--<uses-permission android:name="android.permission.INTERNET"/>-->
+                <uses-permission android:name="android.permission.INTERNET"/>
                 <!--<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>-->
                 <!--<uses-permission android:name="android.permission.READ_PHONE_STATE"/>-->
                 <!--<uses-permission android:name="android.permission.VIBRATE"/>-->

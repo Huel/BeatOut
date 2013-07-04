@@ -7,21 +7,21 @@
  */
 package
 {
-import starling.display.Sprite;*
+import starling.display.Sprite;
 
 public class Game extends Sprite
 {
-    private static var sSequencer:ToneMatrixStarling;
+    private static var sSequencer:StarlingToneMatrix;
 
     public function Game()
     {
         if (sSequencer == null)
-            sSequencer = new ToneMatrixStarling();
+            sSequencer = new StarlingToneMatrix();
 
         addChild(sSequencer);
     }
 
-    public static function get sequencer():ToneMatrixStarling { return sSequencer; }
+    public static function get sequencer():StarlingToneMatrix { return sSequencer; }
 
 }
 }

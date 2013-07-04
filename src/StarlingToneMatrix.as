@@ -2,14 +2,13 @@ package
 {
     import starling.display.Sprite;
     import starling.events.Event;
-    import starling.events.TouchEvent;
     import test.effects.Delay;
     import test.poly.SimplePolySynthVoiceFactory;
     import tonfall.core.Engine;
     import tonfall.core.TimeConversion;
     import tonfall.prefab.poly.PolySynth;
 
-public class ToneMatrixStarling extends AbstractStarlingApp
+public class StarlingToneMatrix extends AbstractStarlingApp
 {
     private const sequencer : TonematrixSequencer = new TonematrixSequencer();
     private const generator : PolySynth = new PolySynth( SimplePolySynthVoiceFactory.INSTANCE );
@@ -17,12 +16,12 @@ public class ToneMatrixStarling extends AbstractStarlingApp
 
     private var _container: Sprite;
     public var _selectMode: Boolean;
+    public var currentStep: int;
 
-    public function ToneMatrixStarling()
+    public function StarlingToneMatrix()
     {
         initView();
         initAudio();
-        trace("ToneMatrix created!") ;
     }
 
     private function initAudio() : void
@@ -133,7 +132,6 @@ final class SequencerButton extends Button
     public function set selected( selected : Boolean ) : void
     {
         _selected = selected;
-        trace("Button Hit") ;
 
         update();
     }
@@ -166,12 +164,14 @@ final class TonematrixSequencer extends Processor
         var index: int = int( info.barFrom * 16.0 );
         var position: Number = index / 16.0;
 
+
         while( position < info.barTo )
         {
             if( position >= info.barFrom )
             {
                 for( var i: int = 0 ; i < 16 ; ++i )
                 {
+                    Game.sequencer.currentStep = i;
                     if(pattern[index%16][i])
                     {
                         var event: TimeEventNote = new TimeEventNote();

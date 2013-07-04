@@ -12,6 +12,8 @@ public class BeatOut extends Sprite
 
     public function BeatOut()
     {
+        Starling.handleLostContext = true;
+
         _starling = new Starling(StartUp, stage);
         _starling.start();
     }
