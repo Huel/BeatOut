@@ -19,7 +19,7 @@ import starling.textures.Texture;
 
 public class Character extends Tile{
 
-    private var _amountOfTones:int;
+
     public var level:int;
 
     public function Character(amountOfTones:int, level:int, view:Texture)

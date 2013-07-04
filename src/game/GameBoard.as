@@ -12,7 +12,6 @@ import flash.geom.Point;
 import interfaces.IToneMatrix;
 
 import starling.display.Sprite;
-import starling.events.TouchEvent;
 
 public class GameBoard extends Sprite {
     private const COLUMNS:int = 8;
@@ -26,7 +25,9 @@ public class GameBoard extends Sprite {
 
     public function GameBoard() {
 
-        _toneMatrix = new MockToneMatrix();
+        var tonematrix = new StarlingToneMatrix();
+        addChild(tonematrix);
+        _toneMatrix = tonematrix as IToneMatrix;
 
         for (var x:int = 0; x < COLUMNS; x++)
         {

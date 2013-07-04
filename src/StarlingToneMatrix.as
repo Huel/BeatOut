@@ -1,11 +1,7 @@
 package
 {
-import interfaces.IToneMatrix;
-
-import starling.display.Button;
-
-import starling.display.Sprite;
-    import starling.events.Event;
+    import interfaces.IToneMatrix;
+    import starling.display.Sprite;
     import test.effects.Delay;
     import test.poly.SimplePolySynthVoiceFactory;
     import tonfall.core.Engine;
@@ -19,12 +15,10 @@ public class StarlingToneMatrix extends AbstractStarlingApp implements IToneMatr
     private const delay: Delay = new Delay( TimeConversion.barsToMillis(3.0/16.0, Engine.getInstance().bpm) );
 
     private var _container: Sprite;
-    public var _selectMode: Boolean;
     public var currentStep: int = 0;
 
     public function StarlingToneMatrix()
     {
-        initView();
         initAudio();
     }
 
@@ -46,43 +40,6 @@ public class StarlingToneMatrix extends AbstractStarlingApp implements IToneMatr
         sequencer.pattern[u][v] = value;
     }
 
-    private function initView() : void
-    {
-        _container = new Sprite();
-        _container.x = 128;
-        _container.y = 128;
-        addChild( _container );
-
-        for( var u: int = 0 ; u < 16 ; ++u )
-        {
-            for( var v: int = 0 ; v < 16 ; ++v )
-            {
-                var button: SequencerButton = new SequencerButton( u, v );
-
-                button.x = ( u << 5 );
-                button.y = ( v << 5 );
-
-                _container.addChild( button );
-            }
-        }
-
-    }
-
-    private function clearing(event:Event):void
-    {
-        clear();
-    }
-
-    override protected function resize( event : Event = null ) : void
-    {
-        if( null != _container )
-        {
-            _container.x = ( stage.stageWidth  - 512 ) >> 1;
-            _container.y = ( stage.stageHeight - 512 ) >> 1;
-        }
-    }
-
-
     public function getCurrentSequencerPosition():int
     {
         return this.currentStep;
@@ -98,74 +55,20 @@ public class StarlingToneMatrix extends AbstractStarlingApp implements IToneMatr
             }
         }
     }
-}
-}
 
-import starling.display.Button;
-import starling.events.Event;
+    public function getWidth():int {
+        return 16;
+    }
+
+    public function getHeight():int {
+        return 16;
+    }
+}
+}
 
 import tonfall.core.BlockInfo;
 import tonfall.core.Processor;
 import tonfall.core.TimeEventNote;
-
-
-final class SequencerButton extends Button
-{
-    private var _u : int;
-    private var _v : int;
-
-    private var _selected: Boolean;
-
-    public function SequencerButton( u : int, v : int )
-    {
-        super(StartUp.assets.getTexture("BeatOutButton"));
-
-        _u = u;
-        _v = v;
-
-        this.scaleX = 0.7;
-        this.scaleY = 0.7;
-        this. alpha = 0.5;
-
-        addEventListener( Event.TRIGGERED, pressedButton )
-
-        update();
-    }
-
-    private function pressedButton(event:Event):void
-    {
-        this.selected = Game.sequencer._selectMode = !this.selected;
-
-        Game.sequencer.setPosition( this.u, this.v, this.selected );
-    }
-
-    public function get u() : int
-    {
-        return _u;
-    }
-
-    public function get v() : int
-    {
-        return _v;
-    }
-
-    public function get selected() : Boolean
-    {
-        return _selected;
-
-    }
-
-    public function set selected( selected : Boolean ) : void
-    {
-        _selected = selected;
-        update();
-    }
-
-    private function update(): void
-    {
-         _selected ? this.alpha = 1 : this.alpha = 0.5 ;
-    }
-}
 
 final class TonematrixSequencer extends Processor
 {
@@ -189,15 +92,12 @@ final class TonematrixSequencer extends Processor
         var index: int = int( info.barFrom * 16.0 );
         var position: Number = index / 16.0;
 
-        //trace(Game.sequencer.cleard);
-
         while( position < info.barTo )
         {
             if( position >= info.barFrom )
             {
                 for( var i: int = 0 ; i < 16 ; ++i )
                 {
-                    Game.sequencer.currentStep = i;
                     if(pattern[index%16][i])
                     {
                         var event: TimeEventNote = new TimeEventNote();
