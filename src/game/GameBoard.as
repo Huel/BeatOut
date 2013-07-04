@@ -8,24 +8,31 @@
 package game {
 import flash.geom.Point;
 import flash.media.SoundChannel;
+import flash.media.SoundTransform;
 
 import interfaces.IToneMatrix;
 import starling.display.Sprite;
 
-import tonfall.format.pcm.PCMSound;
-
-public class GameBoard extends Sprite {
+public class GameBoard extends Sprite
+{
     private const COLUMNS:int = 8;
     private const ROWS:int = 4;
     private const TILE_SIZE:int = 125;
     private const BARS_IN_TILE:int = 2;
-    private var Track1:PCMSound;
+
+    private var music:SoundChannel;
+    private var musicTransform:SoundTransform;
 
     public var tiles:Array = new Array();
     private var _toneMatrix:IToneMatrix;
     private var _characterPreview:TilePreview;
 
-    public function GameBoard() {
+    public function GameBoard()
+    {
+
+        musicTransform = new SoundTransform(1,0);
+        music = StartUp.assets.playSound("Beat",40,100,musicTransform);
+
 
 
         var tonematrix = new StarlingToneMatrix();
@@ -46,6 +53,7 @@ public class GameBoard extends Sprite {
         _characterPreview.x = this.width/2;
         _characterPreview.y = 500;
         addChild(_characterPreview);
+
     }
 
     private function SetTile(x:int, y:int, tile:Tile):void {

@@ -27,7 +27,7 @@ package
 
         //Audio
             [Embed(source="/../assets/audio/BeatOut1.mp3")]
-             private static const Track1:Class;
+            public static const Beat:Class;
 
 	}
 }

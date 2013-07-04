@@ -8,6 +8,8 @@
 package
 {
 
+import flash.filesystem.File;
+
 import starling.core.Starling;
 import starling.display.Image;
 import starling.display.Sprite;
@@ -43,6 +45,7 @@ public class StartUp extends Sprite
         mLoadingProgress.y = 800 * 0.7;
         addChild(mLoadingProgress);
 
+        sAssets.verbose = true;
         sAssets.enqueue(EmbeddedAssets);
 
         sAssets.loadQueue(function(ratio:Number):void
