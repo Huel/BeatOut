@@ -7,7 +7,7 @@
  */
 package
 {
-import starling.display.Sprite;
+import starling.display.Sprite;*
 
 public class Game extends Sprite
 {

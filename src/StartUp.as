@@ -55,7 +55,7 @@ public class StartUp extends Sprite
                     mLoadingProgress = null;
                     removeChild(textField,true);
                     showGame();
-                }, 2.15);
+                }, 0.15);
         });
     }
 
