@@ -4,7 +4,7 @@
     <list default="true" id="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" name="Default" comment="" />
     <ignored path="BeatOut.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/fragment.js2" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372944425932" ignored="false" />
+    <file path="/fragment.js2" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372953816993" ignored="false" />
     <file path="/BeatOut.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372944544144" ignored="false" />
     <file path="/StartUp.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372875173733" ignored="false" />
     <file path="/BeatOut-app.xml" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372944489664" ignored="false" />
@@ -18,16 +18,18 @@
     <file path="/IToneMatrix.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372939954337" ignored="false" />
     <file path="/Character.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372944001507" ignored="false" />
     <file path="/Level1Character.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372930444637" ignored="false" />
-    <file path="/GameBoard.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372948940665" ignored="false" />
+    <file path="/GameBoard.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372952607529" ignored="false" />
     <file path="/ITile.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372944370092" ignored="false" />
     <file path="/EmptyTile.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372944008048" ignored="false" />
     <file path="/CharacterSpawner.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372942055369" ignored="false" />
-    <file path="/CharacterFactory.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372949106422" ignored="false" />
+    <file path="/CharacterFactory.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372952572936" ignored="false" />
     <file path="/a.dummy" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372943541650" ignored="false" />
     <file path="/MockToneMatrix.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372940449936" ignored="false" />
     <file path="/TilePreview.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372943530850" ignored="false" />
     <file path="/Tile.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372944288597" ignored="false" />
     <file path="/TileTouchEvent.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372943857020" ignored="false" />
+    <file path="/BgmManager.as" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372952049440" ignored="false" />
+    <file path="/fragment.java" changelist="872d006e-baa0-485a-a4d7-ba03a1ddf7fe" time="1372953717848" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +93,7 @@
       <file leaf-file-name="BeatOut.as" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/BeatOut.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="48" selection-start="387" selection-end="387" vertical-scroll-proportion="0.0">
+            <state line="7" column="18" selection-start="167" selection-end="167" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#11#39#0" expanded="true" />
               </folding>
@@ -114,7 +116,6 @@
             <state line="17" column="0" selection-start="302" selection-end="302" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#173#195#0" expanded="true" />
-                <marker date="1372949444000" expanded="true" signature="233:341" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -129,22 +130,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CharacterSpawner.as" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="CharacterSpawner.as" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/game/CharacterSpawner.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="37" selection-start="496" selection-end="496" vertical-scroll-proportion="0.3100159">
+            <state line="22" column="30" selection-start="525" selection-end="534" vertical-scroll-proportion="0.0">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EmptyTile.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/game/EmptyTile.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="21" selection-start="528" selection-end="528" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#168#192#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -152,16 +142,16 @@
       <file leaf-file-name="BeatOut-app.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BeatOut-app.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="92" column="30" selection-start="4423" selection-end="4423" vertical-scroll-proportion="0.0">
+            <state line="77" column="19" selection-start="3736" selection-end="3736" vertical-scroll-proportion="-8.923077">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameBoard.as" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="GameBoard.as" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/game/GameBoard.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="47" selection-start="1246" selection-end="1246" vertical-scroll-proportion="0.0">
+            <state line="121" column="46" selection-start="3543" selection-end="3543" vertical-scroll-proportion="0.34446764">
               <folding>
                 <element signature="e#168#196#0" expanded="true" />
               </folding>
@@ -183,7 +173,7 @@
       <file leaf-file-name="CharacterFactory.as" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/game/CharacterFactory.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="51" selection-start="903" selection-end="903" vertical-scroll-proportion="0.0">
+            <state line="41" column="20" selection-start="1335" selection-end="1335" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -207,7 +197,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/game/Level1Character.as" />
         <option value="$PROJECT_DIR$/src/Game.as" />
         <option value="$PROJECT_DIR$/src/interfaces/IToneMatrix.as" />
         <option value="$PROJECT_DIR$/src/game/MockToneMatrix.as" />
@@ -217,12 +206,13 @@
         <option value="$PROJECT_DIR$/src/game/Character.as" />
         <option value="$PROJECT_DIR$/src/game/EmptyTile.as" />
         <option value="$PROJECT_DIR$/src/game/Tile.as" />
+        <option value="$PROJECT_DIR$/src/EmbeddedAssets.as" />
+        <option value="$PROJECT_DIR$/src/game/CharacterSpawner.as" />
+        <option value="$PROJECT_DIR$/src/game/BgmManager.as" />
+        <option value="$PROJECT_DIR$/src/game/CharacterFactory.as" />
         <option value="$PROJECT_DIR$/BeatOut-app.xml" />
         <option value="$PROJECT_DIR$/src/BeatOut.as" />
-        <option value="$PROJECT_DIR$/src/game/CharacterFactory.as" />
-        <option value="$PROJECT_DIR$/src/EmbeddedAssets.as" />
         <option value="$PROJECT_DIR$/src/game/GameBoard.as" />
-        <option value="$PROJECT_DIR$/src/game/CharacterSpawner.as" />
       </list>
     </option>
   </component>
@@ -420,11 +410,29 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Flash App.BeatOut">
+  <component name="RunManager" selected="Flash App.BeatOut Device">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
       <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -525,6 +533,22 @@
       <patterns />
       <method />
     </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <method />
+    </configuration>
     <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
       <option name="BCName" value="" />
       <option name="IOSSimulatorSdkPath" value="" />
@@ -567,7 +591,7 @@
       <option name="appDescriptorForEmulator" value="Android" />
       <option name="debugTransport" value="USB" />
       <option name="debuggerSdkRaw" value="BC SDK" />
-      <option name="emulator" value="Other" />
+      <option name="emulator" value="E720" />
       <option name="emulatorAdlOptions" value="" />
       <option name="fastPackaging" value="true" />
       <option name="fullScreenHeight" value="800" />
@@ -582,9 +606,9 @@
       </option>
       <option name="mobileRunTarget" value="Emulator" />
       <option name="moduleName" value="BeatOut" />
-      <option name="overriddenMainClass" value="" />
-      <option name="overriddenOutputFileName" value="" />
-      <option name="overrideMainClass" value="false" />
+      <option name="overriddenMainClass" value="BeatOut" />
+      <option name="overriddenOutputFileName" value="BeatOut.swf" />
+      <option name="overrideMainClass" value="true" />
       <option name="runTrusted" value="true" />
       <option name="screenDpi" value="0" />
       <option name="screenHeight" value="800" />
@@ -700,7 +724,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32964602" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39933628" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39933628" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32964602" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -711,9 +735,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18482251" sideWeight="0.7522124" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.249694" sideWeight="0.7522124" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24778761" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18482251" sideWeight="0.6006637" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.249694" sideWeight="0.6006637" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24778761" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -836,18 +860,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BeatOut-app.xml">
+    <entry file="file://$PROJECT_DIR$/src/EmbeddedAssets.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="30" selection-start="4423" selection-end="4423" vertical-scroll-proportion="0.0">
+        <state line="10" column="42" selection-start="266" selection-end="267" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BeatOut.as">
+    <entry file="file://$PROJECT_DIR$/src/game/CharacterSpawner.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="48" selection-start="387" selection-end="387" vertical-scroll-proportion="0.0">
+        <state line="22" column="30" selection-start="525" selection-end="534" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/CharacterFactory.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="20" selection-start="1335" selection-end="1335" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Game.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="0" selection-start="302" selection-end="302" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#11#39#0" expanded="true" />
+            <element signature="e#173#195#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -859,43 +897,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Game.as">
+    <entry file="file://$PROJECT_DIR$/BeatOut-app.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="302" selection-end="302" vertical-scroll-proportion="0.0">
+        <state line="77" column="19" selection-start="3736" selection-end="3736" vertical-scroll-proportion="-8.923077">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BeatOut.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="18" selection-start="167" selection-end="167" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#173#195#0" expanded="true" />
-            <marker date="1372949444000" expanded="true" signature="233:341" placeholder="{...}" />
+            <element signature="e#11#39#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/EmbeddedAssets.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="42" selection-start="266" selection-end="267" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/CharacterFactory.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="51" selection-start="903" selection-end="903" vertical-scroll-proportion="0.0">
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/game/GameBoard.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="47" selection-start="1246" selection-end="1246" vertical-scroll-proportion="0.0">
+        <state line="121" column="46" selection-start="3543" selection-end="3543" vertical-scroll-proportion="0.34446764">
           <folding>
             <element signature="e#168#196#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/CharacterSpawner.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="37" selection-start="496" selection-end="496" vertical-scroll-proportion="0.3100159">
-          <folding />
         </state>
       </provider>
     </entry>
