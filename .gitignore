@@ -26,3 +26,5 @@ bin-release/
 # Maven
 log/
 target/
+
+*.swf
