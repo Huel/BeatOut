@@ -28,4 +28,4 @@ log/
 target/
 
 *.swf
-*.xml
+workspace.xml
