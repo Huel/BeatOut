@@ -18,6 +18,7 @@ public class Tile extends EventDispatcher {
 
     protected var _view:DisplayObject;
     private var _position:Point;
+    protected var _amountOfTones:int;
 
     protected function initialize():void {
         _view.addEventListener(TouchEvent.TOUCH, onViewTapped)
@@ -36,7 +37,7 @@ public class Tile extends EventDispatcher {
 
 
     public function getToneAmount():int {
-        return 0;
+        return _amountOfTones;
     }
 
     public function getView():DisplayObject {
