@@ -22,5 +22,12 @@ package
             [Embed(source="/../assets/textures/EmptyTile.png")]
             public static const EmptyTile:Class;
 
+            [Embed(source="/../assets/textures/background.png")]
+            public static const Background:Class;
+
+        //Audio
+            [Embed(source="/../assets/audio/BeatOut1.mp3")]
+             private static const Track1:Class;
+
 	}
 }

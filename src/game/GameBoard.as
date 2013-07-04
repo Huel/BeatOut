@@ -6,28 +6,27 @@
  * To change this template use File | Settings | File Templates.
  */
 package game {
-import flash.display.Screen;
 import flash.geom.Point;
-
-import game.Character;
+import flash.media.SoundChannel;
 
 import interfaces.IToneMatrix;
-
-import org.osmf.elements.compositeClasses.SerialElementSegment;
-
 import starling.display.Sprite;
+
+import tonfall.format.pcm.PCMSound;
 
 public class GameBoard extends Sprite {
     private const COLUMNS:int = 8;
     private const ROWS:int = 4;
     private const TILE_SIZE:int = 125;
     private const BARS_IN_TILE:int = 2;
+    private var Track1:PCMSound;
 
     public var tiles:Array = new Array();
     private var _toneMatrix:IToneMatrix;
     private var _characterPreview:TilePreview;
 
     public function GameBoard() {
+
 
         var tonematrix = new StarlingToneMatrix();
         addChild(tonematrix);
@@ -43,8 +42,9 @@ public class GameBoard extends Sprite {
         }
 
         _characterPreview = new TilePreview();
-        _characterPreview.x = 600;
-        _characterPreview.y = 600;
+        _characterPreview.pivotX = _characterPreview.width/2;
+        _characterPreview.x = this.width/2;
+        _characterPreview.y = 500;
         addChild(_characterPreview);
     }
 
