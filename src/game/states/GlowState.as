@@ -7,6 +7,7 @@
  */
 package game.states {
 import game.Character;
+import game.EmptyTile;
 import game.Tile;
 
 import starling.display.BlendMode;
@@ -17,17 +18,30 @@ import starling.events.Event;
 public class GlowState extends TileState{
 
     private var _glow:DisplayObject;
+    private var _speed:Number;
     public function GlowState(tile:Tile) {
         super(tile);
 
         _glow = new Image(StartUp.assets.getTexture("TileGlow"));
+        _glow.touchable = false;
     }
 
     override public function Activate():void
     {
         var view = _tile.getView();
 
-        _glow.alpha = 1;
+        // HACK!
+        if (_tile is EmptyTile)
+        {
+            _glow.alpha = 0.3;
+            _speed = 0.01;
+        }
+        else
+        {
+            _glow.alpha = 0.9;
+            _speed = 0.05;
+        }
+
         _glow.x = view.x;
         _glow.y = view.y;
 
@@ -37,7 +51,7 @@ public class GlowState extends TileState{
     }
 
     private function update(event:Event):void {
-        _glow.alpha -= 0.05;
+        _glow.alpha -= _speed;
         if (_glow.alpha <= 0)
         {
             _tile.getView().removeEventListener(Event.ENTER_FRAME, update);
