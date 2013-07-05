@@ -10,6 +10,9 @@ package
             [Embed(source="/../assets/textures/startButton.png")]
             public static const StartButton:Class;
 
+            [Embed(source="/../assets/textures/quitButton.png")]
+            public static const QuitButton:Class;
+
 //            [Embed(source="/../assets/textures/Level1Tile.png")]
             [Embed(source="/../assets/textures/redTile02.png")]
             public static const Level1Tile:Class;
