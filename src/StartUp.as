@@ -20,11 +20,8 @@ import utils.ProgressBar;
 
 public class StartUp extends Sprite
 {
-    [Embed(source="/../assets/textures/splash.png")]
-    public static const Splash:Class;
-
-    private var mLoadingProgress:ProgressBar;
     private var mGame:Game;
+    private var splashScreen:Image;
 
     private static var sAssets:AssetManager;
 
@@ -33,34 +30,49 @@ public class StartUp extends Sprite
         if (sAssets ==null)
             sAssets = new AssetManager();
 
-        var textField:TextField = new TextField(1200, 300, "BeatOut");
-        textField.fontSize = 100;
-        textField.color= 0xffffff;
-        addChild(textField);
+        sAssets.verbose = true;
 
-
-        mLoadingProgress = new ProgressBar(175, 20);
-        mLoadingProgress.x = 1200 / 2;
-        mLoadingProgress.y = 800 / 2;
-        mLoadingProgress.y = 800 * 0.7;
-        addChild(mLoadingProgress);
-
-        //sAssets.verbose = true;
         sAssets.enqueue(EmbeddedAssets);
 
+        assets.loadQueue(function(ratio:Number):void
+        {
+            trace("Loading assets, progress:", ratio);
+
+            if (ratio == 1.0)
+                splash();
+        });
+
+    }
+
+    private function splash():void
+    {
+        splashScreen = new Image(sAssets.getTexture("Splash"));
+        splashScreen.x = 0;
+        splashScreen.y = 0;
+        addChild(splashScreen);
+
+        Starling.juggler.delayCall(function():void
+        {
+            loadGame();
+            trace("loadgame");
+        }, 2);
+    }
+
+    private function loadGame():void
+    {
         sAssets.loadQueue(function(ratio:Number):void
         {
-            mLoadingProgress.ratio = ratio;
+            splashScreen = new Image(sAssets.getTexture("Logo"));
+            addChild(splashScreen);
 
             if (ratio == 1)
                 Starling.juggler.delayCall(function():void
                 {
-                    mLoadingProgress.removeFromParent(true);
-                    mLoadingProgress = null;
-                    removeChild(textField,true);
                     showGame();
-                }, 0.15);
+                    removeChild(splashScreen,true);
+                }, 2);
         });
+
     }
 
     private function showGame():void

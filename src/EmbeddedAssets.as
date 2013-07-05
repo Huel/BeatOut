@@ -35,6 +35,12 @@ package
             [Embed(source="/../assets/textures/TileGlow.png")]
             public static const TileGlow:Class;
 
+            [Embed(source="/../assets/textures/splash.png")]
+            public static const Splash:Class;
+
+            [Embed(source="/../assets/textures/logo.png")]
+            public static const Logo:Class;
+
 
 
         //Audio
