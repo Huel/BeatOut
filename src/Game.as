@@ -34,7 +34,7 @@ public class Game extends Sprite
         startButton.addEventListener(Event.TRIGGERED, showGame);
         addChild(startButton);
 
-        quitButton = new Button(StartUp.assets.getTexture("QuitButton"),"X");
+        quitButton = new Button(StartUp.assets.getTexture("QuitButton"));
         quitButton.fontSize = 30;
         quitButton.scaleX = 0.7;
         quitButton.scaleY = 0.7;
@@ -59,7 +59,7 @@ public class Game extends Sprite
 
     public function createGameBoard():void
     {
-        theBoard = new GameBoard();
+        theBoard = new GameBoard(3);
         theBoard.pivotX = theBoard.width/2;
         theBoard.pivotY = theBoard.height/2;
 

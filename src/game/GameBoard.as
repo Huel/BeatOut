@@ -33,7 +33,8 @@ public class GameBoard extends Sprite {
     private static var sBeats:BeatPlayer;
     private var _moves:int;
     private var _movesTextField:TextField;
-    private var soundTest:int = 1 ;
+    private var _soundLayer:int = 1;
+
 
 
     public var tiles:Array = new Array();
@@ -79,7 +80,7 @@ public class GameBoard extends Sprite {
     private function loadLevel(level:int):void {
         for each (var point:Point in Levels.config[level])
         {
-            SetTile(point.x, point.y, new GoalTile());
+            SetTile(point.x-1, point.y-1, new GoalTile());
         }
 
         _moves = Levels.moveLimit[level][0];
@@ -156,17 +157,27 @@ public class GameBoard extends Sprite {
             if (result.level == 4)
             {
                 PlayTile(tile.getPosition().x, tile.getPosition().y,_characterPreview.next);
+                _soundLayer++;
+                if (_soundLayer <= 4)
+                {
+                    sBeats.changeSound(_soundLayer);
+                }
+
                 var gameWon:Boolean = CheckGameWon();
                 if (gameWon)
                 {
-                    GoToResultScreen();
+                    WinGame();
                 }
             }
         }
 
     }
 
-    private function GoToResultScreen():void {
+    private function WinGame():void {
+        
+    }
+
+    private function GameOver():void {
 
     }
 
@@ -223,7 +234,7 @@ public class GameBoard extends Sprite {
         _moves--;
         if (_moves <= 0)
         {
-            GoToResultScreen();
+            GameOver();
         }
         else
         {

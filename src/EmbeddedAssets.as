@@ -50,6 +50,15 @@ package
             [Embed(source="/../assets/textures/logo.png")]
             public static const Logo:Class;
 
+            [Embed(source="/../assets/textures/1star.png")]
+            public static const Star1:Class;
+
+            [Embed(source="/../assets/textures/2stars.png")]
+            public static const Star2:Class;
+
+            [Embed(source="/../assets/textures/3stars.png")]
+            public static const Star3:Class;
+
 
 
         //Audio
