@@ -7,8 +7,6 @@
  */
 package game {
 import flash.geom.Point;
-import flash.media.SoundChannel;
-import flash.media.SoundTransform;
 
 import interfaces.IToneMatrix;
 import starling.display.Sprite;
@@ -20,8 +18,8 @@ public class GameBoard extends Sprite
     private const TILE_SIZE:int = 125;
     private const BARS_IN_TILE:int = 2;
 
-    private var music:SoundChannel;
-    private var musicTransform:SoundTransform;
+    private static var sBeats:BeatPlayer;
+    private var soundTest:int = 1 ;
 
     public var tiles:Array = new Array();
     private var _toneMatrix:IToneMatrix;
@@ -30,10 +28,8 @@ public class GameBoard extends Sprite
     public function GameBoard()
     {
 
-        musicTransform = new SoundTransform(1,0);
-        music = StartUp.assets.playSound("Beat",40,100,musicTransform);
-
-
+        if (sBeats ==null)
+            sBeats = new BeatPlayer();
 
         var tonematrix = new StarlingToneMatrix();
         addChild(tonematrix);
@@ -77,7 +73,6 @@ public class GameBoard extends Sprite
         view.y = y * TILE_SIZE;
         addChild(view);
 
-        SetTone(x,y,tile);
     }
 
     private function onTileTouch(event:TileTouchEvent):void {
@@ -115,6 +110,19 @@ public class GameBoard extends Sprite
         {
             SetTile(x,y,tile);
         }
+
+        SetTone(x,y,tile);
+
+        if (soundTest > 0 && soundTest <= 4)
+        {
+            sBeats.changeSound(soundTest);
+            ++soundTest;
+        }
+        else if (soundTest > 4)
+        {
+            soundTest = 1;
+        }
+        trace("Playing Tack "+soundTest );
     }
 
     private function GetEqualNeighbours(x:int, y:int, level:int, recurse:Boolean):Array {
@@ -191,5 +199,7 @@ public class GameBoard extends Sprite
             }
         }
     }
+
+    public static function get beats():BeatPlayer { return sBeats; }
 }
 }

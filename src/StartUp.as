@@ -45,7 +45,7 @@ public class StartUp extends Sprite
         mLoadingProgress.y = 800 * 0.7;
         addChild(mLoadingProgress);
 
-        sAssets.verbose = true;
+        //sAssets.verbose = true;
         sAssets.enqueue(EmbeddedAssets);
 
         sAssets.loadQueue(function(ratio:Number):void

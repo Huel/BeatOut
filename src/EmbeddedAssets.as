@@ -27,7 +27,16 @@ package
 
         //Audio
             [Embed(source="/../assets/audio/BeatOut1.mp3")]
-            public static const Beat:Class;
+            public static const Beat1_1:Class;
+
+            [Embed(source="/../assets/audio/BeatOut2.mp3")]
+            public static const Beat1_2:Class;
+
+            [Embed(source="/../assets/audio/BeatOut3.mp3")]
+            public static const Beat1_3:Class;
+
+            [Embed(source="/../assets/audio/BeatOut4.mp3")]
+            public static const Beat1_4:Class;
 
 	}
 }
