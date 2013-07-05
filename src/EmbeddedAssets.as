@@ -7,6 +7,12 @@ package
 			[Embed(source="/../assets/textures/BeatOutButton.png")]
 			public static const BeatOutButton:Class;
 
+            [Embed(source="/../assets/textures/startButton.png")]
+            public static const StartButton:Class;
+
+            [Embed(source="/../assets/textures/quitButton.png")]
+            public static const QuitButton:Class;
+
 //            [Embed(source="/../assets/textures/Level1Tile.png")]
             [Embed(source="/../assets/textures/redTile02.png")]
             public static const Level1Tile:Class;
@@ -37,6 +43,12 @@ package
 
             [Embed(source="/../assets/textures/TileGlow.png")]
             public static const TileGlow:Class;
+
+            [Embed(source="/../assets/textures/splash.png")]
+            public static const Splash:Class;
+
+            [Embed(source="/../assets/textures/logo.png")]
+            public static const Logo:Class;
 
 
 

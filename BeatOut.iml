@@ -8,7 +8,11 @@
         </dependencies>
         <compiler-options />
         <packaging-air-desktop />
-        <packaging-android enabled="true" use-generated-descriptor="false" custom-descriptor-path="$MODULE_DIR$/BeatOut-app.xml" package-file-name="BeatOut" />
+        <packaging-android enabled="true" use-generated-descriptor="false" custom-descriptor-path="$MODULE_DIR$/BeatOut-app.xml" package-file-name="BeatOut">
+          <files-to-package>
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/assets/textures" path-in-package="." />
+          </files-to-package>
+        </packaging-android>
         <packaging-ios use-generated-descriptor="false" custom-descriptor-path="$MODULE_DIR$/BeatOut-app.xml" package-file-name="BeatOut" />
       </configuration>
     </configurations>
@@ -21,6 +25,7 @@
       <sourceFolder url="file://$MODULE_DIR$/libs/starling/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/libs/tonfall/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/assets" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/assets/textures" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="flex_sdk_4.6" jdkType="Flex SDK Type (new)" />
     <orderEntry type="sourceFolder" forTests="false" />

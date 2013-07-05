@@ -23,8 +23,6 @@ public class BeatPlayer
     private var playingChannel:int;
     private var trackStartingPoint:int = 40;
 
-    private var loop:int=1;
-
     public function BeatPlayer(track:int =1)
     {
         currentTrack = track;
@@ -49,6 +47,11 @@ public class BeatPlayer
     private function changeSoundNow(event:Event):void
     {
         switchBeat();
+    }
+
+    public function stop():void
+    {
+        beatChannel1.stop();
     }
 
     private function switchBeat():void
