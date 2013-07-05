@@ -8,6 +8,10 @@
 package game {
 import flash.geom.Point;
 
+import game.states.TileState;
+import game.states.GlowState;
+import game.states.NormalState;
+
 import starling.display.DisplayObject;
 
 import starling.display.Image;
@@ -30,5 +34,7 @@ public class Character extends Tile{
         this._view = new Image(view);
         initialize();
     }
+
+
 }
 }
