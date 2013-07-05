@@ -5,7 +5,9 @@
  * Time: 11:39 AM
  * To change this template use File | Settings | File Templates.
  */
-package game {
+package game.tiles {
+import game.*;
+
 import flash.geom.Point;
 
 import starling.display.Image;
@@ -15,8 +17,6 @@ import starling.textures.Texture;
 import starling.display.DisplayObject;
 
 public class EmptyTile extends Tile{
-
-    private var _position : Point;
 
     public function EmptyTile() {
         _view = new Image(StartUp.assets.getTexture("EmptyTile"));

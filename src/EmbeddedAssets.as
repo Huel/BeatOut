@@ -23,6 +23,9 @@ package
             [Embed(source="/../assets/textures/blueTile02.png")]
             public static const Level4Tile:Class;
 
+            [Embed(source="/../assets/textures/blueTile02Shadow.png")]
+            public static const GoalTile:Class;
+
             [Embed(source="/../assets/textures/EmptyTile.png")]
             public static const EmptyTile:Class;
 
@@ -39,7 +42,16 @@ package
 
         //Audio
             [Embed(source="/../assets/audio/BeatOut1.mp3")]
-             private static const Track1:Class;
+            public static const Beat1_1:Class;
+
+            [Embed(source="/../assets/audio/BeatOut2.mp3")]
+            public static const Beat1_2:Class;
+
+            [Embed(source="/../assets/audio/BeatOut3.mp3")]
+            public static const Beat1_3:Class;
+
+            [Embed(source="/../assets/audio/BeatOut4.mp3")]
+            public static const Beat1_4:Class;
 
 	}
 }

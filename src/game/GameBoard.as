@@ -7,11 +7,19 @@
  */
 package game {
 import flash.geom.Point;
-import flash.media.SoundChannel;
+
+import game.tiles.Character;
+
+import game.tiles.EmptyTile;
+import game.tiles.GoalTile;
+import game.tiles.Tile;
+import game.ui.TilePreview;
+import game.tiles.TileTouchEvent;
 
 import interfaces.IToneMatrix;
 import starling.display.Sprite;
 import starling.events.Event;
+import starling.text.TextField;
 import starling.utils.formatString;
 
 import tonfall.format.pcm.PCMSound;
@@ -22,34 +30,25 @@ public class GameBoard extends Sprite {
     private const TILE_SIZE:int = 125;
     private const BARS_IN_TILE:int = 2;
     private const TONES_IN_TILE:int = 4;
-    private var Track1:PCMSound;
+    private static var sBeats:BeatPlayer;
+    private var _moves:int;
+    private var _movesTextField:TextField;
+    private var soundTest:int = 1 ;
+
 
     public var tiles:Array = new Array();
     private var _toneMatrix:IToneMatrix;
     private var _characterPreview:TilePreview;
-    private var _wave:Wave;
+//    private var _wave:Wave;
 
-    public function GameBoard() {
-
-
-        var tonematrix:StarlingToneMatrix = new StarlingToneMatrix();
-        _toneMatrix = tonematrix as IToneMatrix;
-
-//        _wave = new Wave();
-//        _wave.speed = TILE_SIZE * 4;
-//        _wave.distance = TILE_SIZE*COLUMNS;
-//        addChild(_wave);
-
-        addChild(tonematrix);
-
-
+    public function GameBoard(level:int) {
 
         for (var x:int = 0; x < COLUMNS; x++)
         {
             tiles[x] = new Array();
             for (var y:int = 0; y < ROWS; y++)
             {
-               SetTile(x, y, new EmptyTile());
+                SetTile(x, y, new EmptyTile());
             }
         }
 
@@ -59,8 +58,36 @@ public class GameBoard extends Sprite {
         _characterPreview.y = 500;
         addChild(_characterPreview);
 
+        loadLevel(level);
+
+        if (sBeats ==null)
+            sBeats = new BeatPlayer();
+
+        var tonematrix:StarlingToneMatrix = new StarlingToneMatrix();
+        _toneMatrix = tonematrix as IToneMatrix;
         _toneMatrix.setNotePlayDelegate(onNotePlayed);
         _toneMatrix.setBeatDelegate(onSequencerStep);
+
+//        _wave = new Wave();
+//        _wave.speed = TILE_SIZE * 4;
+//        _wave.distance = TILE_SIZE*COLUMNS;
+//        addChild(_wave);
+
+        addChild(tonematrix);
+    }
+
+    private function loadLevel(level:int):void {
+        for each (var point:Point in Levels.config[level])
+        {
+            SetTile(point.x, point.y, new GoalTile());
+        }
+
+        _moves = Levels.moveLimit[level][0];
+
+        _movesTextField= new TextField(100, 50, " Moves : " + _moves, "Verdana", 20, 0xFFFFFF, true);
+        _movesTextField.x = _characterPreview.x - 300;
+        _movesTextField.y = _characterPreview.y;
+        addChild(_movesTextField);
     }
 
     private function onSequencerStep(bar:int):void {
@@ -68,9 +95,14 @@ public class GameBoard extends Sprite {
         {
             for each (var tile:Tile in tiles[bar/BARS_IN_TILE])
             {
-               tile.setState('glow');
+               tile.glow();
             }
         }
+        if(bar == 0)
+        {
+            sBeats.play();
+        }
+
     }
 
     private function onNotePlayed(step:int, note:int):void {
@@ -103,7 +135,10 @@ public class GameBoard extends Sprite {
         view.y = y * TILE_SIZE;
         addChild(view);
 
-        SetTone(x,y,tile);
+        if (_toneMatrix)
+        {
+            SetTone(x,y,tile);
+        }
     }
 
     private function onTileTouch(event:TileTouchEvent):void {
@@ -113,33 +148,86 @@ public class GameBoard extends Sprite {
             PlayTile(tile.getPosition().x, tile.getPosition().y,_characterPreview.next);
             _characterPreview.moveOn();
         }
+        else if (tile is GoalTile)
+        {
+            var neighbours:Array = new Array();
+            var result:Character =
+                    PreviewPlay(tile.getPosition().x, tile.getPosition().y, _characterPreview.next as Character, neighbours);
+            if (result.level == 4)
+            {
+                PlayTile(tile.getPosition().x, tile.getPosition().y,_characterPreview.next);
+                var gameWon:Boolean = CheckGameWon();
+                if (gameWon)
+                {
+                    GoToResultScreen();
+                }
+            }
+        }
+
     }
 
-    private function PlayTile(x:int, y:int, tile:Tile):void {
+    private function GoToResultScreen():void {
 
-        var character:Character = tile as Character;
+    }
+
+    private function CheckGameWon():Boolean {
+        for (var x:int = 0; x < COLUMNS; x++)
+        {
+            for (var y:int = 0; y < ROWS; y++)
+            {
+                 if (tiles[x][y] is GoalTile)
+                 {
+                     return false;
+                 }
+            }
+        }
+
+        return true;
+    }
+
+
+    private function PreviewPlay(x:int, y:int, character:Character, neighbours:Array):Character
+    {
         var equalNeighbours:Array = GetEqualNeighbours(x,y,character.level, true);
 
         if (equalNeighbours.length >= 2)
         {
             // join neighbours
-            for each (var character:Character in equalNeighbours)
+            for each (var neighbour:Character in equalNeighbours)
             {
-                SetTile(character.getPosition().x, character.getPosition().y, new EmptyTile());
+//                SetTile(character.getPosition().x, character.getPosition().y, new EmptyTile());
+                neighbours.push(neighbour);
             }
             var pumpedUpTile = CharacterFactory.fromInt(character.level+1);
             if (pumpedUpTile)
             {
-                PlayTile(x,y, pumpedUpTile);
+                return PreviewPlay(x,y, pumpedUpTile, neighbours);
             }
             else{
-                // TODO:Player just matched lots of 4-tiles! Get loads of points!!!1!!11!!!!
-                SetTile(x,y,new EmptyTile());
+                // Player just matched lots of 4-tiles.
+                // Do nothing
             }
+        }
+        return character;
+    }
+
+    private function PlayTile(x:int, y:int, tile:Tile):void {
+        var neighbours:Array = new Array();
+        var result:Character = PreviewPlay(x,y, tile as Character, neighbours)
+        for each (var neighbour:Character in neighbours)
+        {
+            SetTile(neighbour.getPosition().x, neighbour.getPosition().y, new EmptyTile());
+        }
+        SetTile(x,y,result);
+
+        _moves--;
+        if (_moves <= 0)
+        {
+            GoToResultScreen();
         }
         else
         {
-            SetTile(x,y,tile);
+            _movesTextField.text = "Moves: " + _moves;
         }
     }
 
@@ -216,5 +304,8 @@ public class GameBoard extends Sprite {
             }
         }
     }
+
+    public static function get beats():BeatPlayer { return sBeats; }
+
 }
 }

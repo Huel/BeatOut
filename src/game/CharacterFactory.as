@@ -6,6 +6,8 @@
  * To change this template use File | Settings | File Templates.
  */
 package game {
+import game.tiles.Character;
+
 public class CharacterFactory {
 
     public static function fromString(level:String):Character

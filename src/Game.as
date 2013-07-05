@@ -25,7 +25,7 @@ public class Game extends Sprite
 
         var Background:Image = new Image(StartUp.assets.getTexture("Background"));
 
-        theBoard = new GameBoard();
+        theBoard = new GameBoard(1);
         theBoard.pivotX = theBoard.width/2;
         theBoard.pivotY = theBoard.height/2;
 

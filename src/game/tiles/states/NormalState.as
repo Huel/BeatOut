@@ -5,9 +5,9 @@
  * Time: 11:02 AM
  * To change this template use File | Settings | File Templates.
  */
-package game.states {
-import game.Character;
-import game.Tile;
+package game.tiles.states {
+import game.tiles.Character;
+import game.tiles.Tile;
 
 public class NormalState extends TileState{
 

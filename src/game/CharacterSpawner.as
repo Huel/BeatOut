@@ -14,10 +14,10 @@ public class CharacterSpawner {
 
     public function CharacterSpawner() {
         _spawnRates = new Object();
-        _spawnRates['level4'] = 0.05;
-        _spawnRates['level3'] = 0.15;
+//        _spawnRates['level4'] = 0.05;
+        _spawnRates['level3'] = 0.1;
         _spawnRates['level2'] = 0.3;
-        _spawnRates['level1'] = 0.5;
+        _spawnRates['level1'] = 0.6;
     }
 
     private function Randomize():String

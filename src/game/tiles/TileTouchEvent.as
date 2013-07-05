@@ -5,7 +5,7 @@
  * Time: 3:14 PM
  * To change this template use File | Settings | File Templates.
  */
-package game {
+package game.tiles {
 import starling.events.Event;
 
 public class TileTouchEvent extends Event {

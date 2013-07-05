@@ -5,12 +5,14 @@
  * Time: 11:30 AM
  * To change this template use File | Settings | File Templates.
  */
-package game {
+package game.tiles {
+import game.*;
+
 import flash.geom.Point;
 
-import game.states.TileState;
-import game.states.GlowState;
-import game.states.NormalState;
+import game.tiles.states.TileState;
+import game.tiles.states.GlowState;
+import game.tiles.states.NormalState;
 
 import starling.display.DisplayObject;
 

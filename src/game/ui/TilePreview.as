@@ -5,7 +5,10 @@
  * Time: 2:21 PM
  * To change this template use File | Settings | File Templates.
  */
-package game {
+package game.ui {
+import game.tiles.*;
+import game.*;
+
 import starling.display.Button;
 import starling.display.Sprite;
 import starling.events.TouchEvent;

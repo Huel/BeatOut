@@ -5,13 +5,16 @@
  * Time: 11:37 AM
  * To change this template use File | Settings | File Templates.
  */
-package game {
+package game.tiles {
+import game.*;
+
 import flash.geom.Point;
 
-import game.states.GlowState;
+import game.tiles.states.GlowState;
 
-import game.states.NormalState;
-import game.states.TileState;
+import game.tiles.states.NormalState;
+import game.tiles.states.PreviewState;
+import game.tiles.states.TileState;
 
 import starling.display.DisplayObject;
 import starling.events.Event;
@@ -29,13 +32,17 @@ public class Tile extends EventDispatcher {
     //States
     private var normalState:NormalState;
     private var glowState:GlowState;
+    private var previewState:PreviewState;
     private var _currentState:TileState;
+    private var _lastState:TileState;
+
 
     protected function initialize():void {
 
         //States
         normalState = new NormalState(this);
         glowState = new GlowState(this);
+        previewState = new PreviewState(this);
 
         _currentState = normalState;
 
@@ -87,12 +94,20 @@ public class Tile extends EventDispatcher {
             case 'glow':
                 newState = glowState;
                 break;
+            case 'wobble':
+                newState = previewState;
+                break;
         }
 
         _currentState.Deactivate();
         _currentState = newState;
         _currentState.Activate();
+    }
 
+    public function glow():void
+    {
+        var glowState:GlowState = new GlowState(this);
+        glowState.Activate();
     }
 }
 }

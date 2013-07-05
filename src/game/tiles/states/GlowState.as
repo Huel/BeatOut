@@ -5,10 +5,10 @@
  * Time: 11:04 AM
  * To change this template use File | Settings | File Templates.
  */
-package game.states {
-import game.Character;
-import game.EmptyTile;
-import game.Tile;
+package game.tiles.states {
+import game.tiles.Character;
+import game.tiles.EmptyTile;
+import game.tiles.Tile;
 
 import starling.display.BlendMode;
 import starling.display.DisplayObject;
@@ -48,6 +48,11 @@ public class GlowState extends TileState{
         view.blendMode = BlendMode.ADD;
         view.parent.addChild(_glow);
         view.addEventListener(Event.ENTER_FRAME, update);
+        view.addEventListener(Event.REMOVED_FROM_STAGE, remove);
+    }
+
+    private function remove(event:Event):void {
+        Deactivate();
     }
 
     private function update(event:Event):void {
@@ -55,7 +60,7 @@ public class GlowState extends TileState{
         if (_glow.alpha <= 0)
         {
             _tile.getView().removeEventListener(Event.ENTER_FRAME, update);
-            _tile.setState('normal');
+            Deactivate();
         }
     }
 
