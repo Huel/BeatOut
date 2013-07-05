@@ -6,32 +6,43 @@
  * To change this template use File | Settings | File Templates.
  */
 package game {
-import flash.display.Screen;
 import flash.geom.Point;
-
-import game.Character;
+import flash.media.SoundChannel;
 
 import interfaces.IToneMatrix;
-
-import org.osmf.elements.compositeClasses.SerialElementSegment;
-
 import starling.display.Sprite;
+import starling.events.Event;
+import starling.utils.formatString;
+
+import tonfall.format.pcm.PCMSound;
 
 public class GameBoard extends Sprite {
     private const COLUMNS:int = 8;
     private const ROWS:int = 4;
     private const TILE_SIZE:int = 125;
     private const BARS_IN_TILE:int = 2;
+    private const TONES_IN_TILE:int = 4;
+    private var Track1:PCMSound;
 
     public var tiles:Array = new Array();
     private var _toneMatrix:IToneMatrix;
     private var _characterPreview:TilePreview;
+    private var _wave:Wave;
 
     public function GameBoard() {
 
-        var tonematrix = new StarlingToneMatrix();
-        addChild(tonematrix);
+
+        var tonematrix:StarlingToneMatrix = new StarlingToneMatrix();
         _toneMatrix = tonematrix as IToneMatrix;
+
+//        _wave = new Wave();
+//        _wave.speed = TILE_SIZE * 4;
+//        _wave.distance = TILE_SIZE*COLUMNS;
+//        addChild(_wave);
+
+        addChild(tonematrix);
+
+
 
         for (var x:int = 0; x < COLUMNS; x++)
         {
@@ -43,11 +54,34 @@ public class GameBoard extends Sprite {
         }
 
         _characterPreview = new TilePreview();
-        _characterPreview.x = 600;
-        _characterPreview.y = 600;
+        _characterPreview.pivotX = _characterPreview.width/2;
+        _characterPreview.x = this.width/2;
+        _characterPreview.y = 500;
         addChild(_characterPreview);
+
+        _toneMatrix.setNotePlayDelegate(onNotePlayed);
+        _toneMatrix.setBeatDelegate(onSequencerStep);
     }
 
+    private function onSequencerStep(bar:int):void {
+        if (bar % BARS_IN_TILE == 0)
+        {
+            for each (var tile:Tile in tiles[bar/BARS_IN_TILE])
+            {
+               tile.setState('glow');
+            }
+        }
+    }
+
+    private function onNotePlayed(step:int, note:int):void {
+//        if ((step%BARS_IN_TILE == 0) && (note%TONES_IN_TILE == 0))
+//        {
+//            var x:int = step/BARS_IN_TILE;
+//            var y:int = note/TONES_IN_TILE;
+//            var character:Character = tiles[x][y];
+//            character.setState('glow');
+//        }
+    }
     private function SetTile(x:int, y:int, tile:Tile):void {
 
         if (tiles[x][y] != null)
@@ -153,9 +187,8 @@ public class GameBoard extends Sprite {
     private function SetTone(x:int, y:int, tile:Tile):void {
         var startX:int = x*BARS_IN_TILE;
         var endX:int = startX + BARS_IN_TILE;
-        var tonesInTile:int = _toneMatrix.getHeight() / ROWS;
-        var startY:int = y*tonesInTile;
-        var endY:int = startY + tonesInTile;
+        var startY:int = y*TONES_IN_TILE;
+        var endY:int = startY + TONES_IN_TILE;
 
         for (var ix:int = startX; ix < endX; ix++)
         {

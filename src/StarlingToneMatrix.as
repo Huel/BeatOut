@@ -15,7 +15,6 @@ public class StarlingToneMatrix extends AbstractStarlingApp implements IToneMatr
     private const delay: Delay = new Delay( TimeConversion.barsToMillis(3.0/16.0, Engine.getInstance().bpm) );
 
     private var _container: Sprite;
-    public var currentStep: int = 0;
 
     public function StarlingToneMatrix()
     {
@@ -35,14 +34,18 @@ public class StarlingToneMatrix extends AbstractStarlingApp implements IToneMatr
         engine.input = delay.signalOutput;
     }
 
+    public function setNotePlayDelegate(delegate:Function):void
+    {
+        this.sequencer.stepDelegate = delegate;
+    }
+
+    public function setBeatDelegate(delegate:Function):void {
+        this.sequencer.beatDelegate = delegate;
+    }
+
     public function setPosition( u: int, v: int, value: Boolean ): void
     {
         sequencer.pattern[u][v] = value;
-    }
-
-    public function getCurrentSequencerPosition():int
-    {
-        return this.currentStep;
     }
 
     public function clear():void
@@ -78,6 +81,9 @@ final class TonematrixSequencer extends Processor
 
     public var receiver: Processor;
 
+    public var stepDelegate:Function;
+    public var beatDelegate:Function;
+
     public function TonematrixSequencer()
     {
         for(var i:int = 0 ;i <16;++i)
@@ -96,10 +102,13 @@ final class TonematrixSequencer extends Processor
         {
             if( position >= info.barFrom )
             {
+                beatDelegate(index%16);
+
                 for( var i: int = 0 ; i < 16 ; ++i )
                 {
                     if(pattern[index%16][i])
                     {
+                        stepDelegate(index%16, i);
                         var event: TimeEventNote = new TimeEventNote();
                         event.barPosition = position;
                         event.note = ToneMatrixNotes[i];

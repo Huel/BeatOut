@@ -8,7 +8,13 @@
 package game {
 import flash.geom.Point;
 
+import game.states.GlowState;
+
+import game.states.NormalState;
+import game.states.TileState;
+
 import starling.display.DisplayObject;
+import starling.events.Event;
 import starling.events.EventDispatcher;
 import starling.events.Touch;
 import starling.events.TouchEvent;
@@ -20,8 +26,25 @@ public class Tile extends EventDispatcher {
     private var _position:Point;
     protected var _amountOfTones:int;
 
+    //States
+    private var normalState:NormalState;
+    private var glowState:GlowState;
+    private var _currentState:TileState;
+
     protected function initialize():void {
+
+        //States
+        normalState = new NormalState(this);
+        glowState = new GlowState(this);
+
+        _currentState = normalState;
+
         _view.addEventListener(TouchEvent.TOUCH, onViewTapped)
+        _view.addEventListener(Event.REMOVED_FROM_STAGE, onRemoved);
+    }
+
+    private function onRemoved(event:Event):void {
+        _currentState.Deactivate();
     }
 
     private function onViewTapped(event:TouchEvent):void {
@@ -50,6 +73,26 @@ public class Tile extends EventDispatcher {
 
     public function setPosition(x:int, y:int):void {
         _position = new Point(x, y);
+    }
+
+    public function setState(state:String):void
+    {
+        var newState:TileState;
+
+        switch (state.toLowerCase())
+        {
+            case 'normal':
+                newState = normalState;
+                break;
+            case 'glow':
+                newState = glowState;
+                break;
+        }
+
+        _currentState.Deactivate();
+        _currentState = newState;
+        _currentState.Activate();
+
     }
 }
 }

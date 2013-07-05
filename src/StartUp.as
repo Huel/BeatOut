@@ -9,6 +9,7 @@ package
 {
 
 import starling.core.Starling;
+import starling.display.Image;
 import starling.display.Sprite;
 import starling.text.TextField;
 import starling.utils.AssetManager;
@@ -17,6 +18,8 @@ import utils.ProgressBar;
 
 public class StartUp extends Sprite
 {
+    [Embed(source="/../assets/textures/splash.png")]
+    public static const Splash:Class;
 
     private var mLoadingProgress:ProgressBar;
     private var mGame:Game;
@@ -33,6 +36,7 @@ public class StartUp extends Sprite
         textField.color= 0xffffff;
         addChild(textField);
 
+
         mLoadingProgress = new ProgressBar(175, 20);
         mLoadingProgress.x = 1200 / 2;
         mLoadingProgress.y = 800 / 2;
@@ -44,9 +48,6 @@ public class StartUp extends Sprite
         sAssets.loadQueue(function(ratio:Number):void
         {
             mLoadingProgress.ratio = ratio;
-
-            // a progress bar should always show the 100% for a while,
-            // so we show the main menu only after a short delay.
 
             if (ratio == 1)
                 Starling.juggler.delayCall(function():void
