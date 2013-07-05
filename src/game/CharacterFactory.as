@@ -36,9 +36,10 @@ public class CharacterFactory {
             case 3:
                 return new Character(3, 3, StartUp.assets.getTexture("Level3Tile"));
             case 4:
-            default:
                 return new Character(4, 4, StartUp.assets.getTexture("Level4Tile"));
         }
+
+        return null;
     }
 }
 }

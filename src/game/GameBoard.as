@@ -102,21 +102,27 @@ public class GameBoard extends Sprite
                 SetTile(character.getPosition().x, character.getPosition().y, new EmptyTile());
             }
             var pumpedUpTile = CharacterFactory.fromInt(character.level+1);
-            SetTile(x,y, pumpedUpTile);
+            if (pumpedUpTile)
+            {
+                PlayTile(x,y, pumpedUpTile);
+            }
+            else{
+                // TODO:Player just matched lots of 4-tiles! Get loads of points!!!1!!11!!!!
+                SetTile(x,y,new EmptyTile());
+            }
         }
         else
         {
             SetTile(x,y,tile);
         }
-//        SetTile(x,y,tile);
     }
 
     private function GetEqualNeighbours(x:int, y:int, level:int, recurse:Boolean):Array {
         var neighbours:Array = new Array();
         var left:int = Math.max(0,x-1);
-        var right:int = Math.min(COLUMNS, x+1);
+        var right:int = Math.min(COLUMNS-1, x+1);
         var up:int = Math.max(0, y-1);
-        var down:int = Math.min(ROWS, y+1);
+        var down:int = Math.min(ROWS-1, y+1);
 
         var inspectedTiles:Array = new Array(
             new Point(x, up),
