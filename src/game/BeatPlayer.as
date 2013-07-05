@@ -21,6 +21,7 @@ public class BeatPlayer
     private var currentlyPlaying:int;
     private var nextPlaying:int;
     private var playingChannel:int;
+    private var trackStartingPoint:int = 40;
 
     private var loop:int=1;
 
@@ -32,13 +33,11 @@ public class BeatPlayer
 
     private function init():void
     {
-        for (var i:int = 1; i < 3 ; i++)
+        for (var i:int = 1; i < 2 ; i++)
         {
              this['beatTransform'+i] = new SoundTransform(1,0);
              trace("BeatTransform"+i+" created!");
         }
-
-        play(1);
     }
 
     public function changeSound(layer:int)
@@ -59,25 +58,24 @@ public class BeatPlayer
 
             beatChannel1.stop();
 
-            beatChannel1 = StartUp.assets.playSound("Beat"+currentTrack+"_"+nextPlaying,35,1,beatTransform1);
+            beatChannel1 = StartUp.assets.playSound("Beat"+currentTrack+"_"+nextPlaying,trackStartingPoint,1,beatTransform1);
             currentlyPlaying = nextPlaying;
             playingChannel = 1;
         }
     }
 
-    public function play(layer:int=1):void
+    public function play():void
     {
 
-           //beatChannel1 = StartUp.assets.playSound("Beat1_1",40,100,beatTransform1);
            if (beatChannel1 == null)
            {
-              beatChannel1 = StartUp.assets.playSound("Beat"+currentTrack+"_1",35,1,beatTransform1);
+              beatChannel1 = StartUp.assets.playSound("Beat"+currentTrack+"_1",trackStartingPoint,1,beatTransform1);
               currentlyPlaying = 1;
               playingChannel = 1;
 
            }
            else
-           beatChannel1 = StartUp.assets.playSound("Beat"+currentTrack+"_"+currentlyPlaying,35,1,beatTransform1);
+           beatChannel1 = StartUp.assets.playSound("Beat"+currentTrack+"_"+currentlyPlaying,trackStartingPoint,1,beatTransform1);
 
 
 
