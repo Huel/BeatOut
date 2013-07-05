@@ -27,6 +27,7 @@ import starling.display.Sprite;
 import starling.events.Event;
 import starling.events.TouchEvent;
 import starling.text.TextField;
+import starling.textures.Texture;
 import starling.utils.formatString;
 
 import tonfall.format.pcm.PCMSound;
@@ -189,7 +190,8 @@ public class GameBoard extends Sprite {
 
     private function WinGame():void {
         _responsive = false;
-        var starScreen:Button = new Button(StartUp.assets.getTexture("Star1"));
+        var texture:Texture = GetStarTexture();
+        var starScreen:Button = new Button(texture);
         starScreen.pivotX = starScreen.width/2;
         starScreen.pivotY = starScreen.height/2;
         var localPoint:Point =
@@ -200,6 +202,26 @@ public class GameBoard extends Sprite {
 
 
         addChild(starScreen);
+    }
+
+    private function GetStarTexture():Texture {
+
+        var star1:int = Levels.moveLimit[_currentLevel][0];
+        var star2:int = Levels.moveLimit[_currentLevel][1];
+        var star3:int = Levels.moveLimit[_currentLevel][2];
+
+        var usedMoves:int = star1 - _moves;
+
+        if (usedMoves < star3)
+        {
+            return StartUp.assets.getTexture("Star3");
+        }
+        if (usedMoves < star2)
+        {
+            return StartUp.assets.getTexture("Star2");
+        }
+
+        return StartUp.assets.getTexture("Star1");
     }
 
     private function NextLevel(event:Event):void {
