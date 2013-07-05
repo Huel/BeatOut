@@ -6,6 +6,7 @@
  * To change this template use File | Settings | File Templates.
  */
 package game {
+import flash.display.Screen;
 import flash.geom.Point;
 
 import game.tiles.Character;
@@ -17,8 +18,14 @@ import game.ui.TilePreview;
 import game.tiles.TileTouchEvent;
 
 import interfaces.IToneMatrix;
+
+import starling.core.Starling;
+import starling.display.Button;
+
+import starling.display.Image;
 import starling.display.Sprite;
 import starling.events.Event;
+import starling.events.TouchEvent;
 import starling.text.TextField;
 import starling.utils.formatString;
 
@@ -34,6 +41,8 @@ public class GameBoard extends Sprite {
     private var _moves:int;
     private var _movesTextField:TextField;
     private var _soundLayer:int = 1;
+    private var _responsive:Boolean = true;
+    private var _currentLevel:int = 1;
 
 
 
@@ -58,6 +67,7 @@ public class GameBoard extends Sprite {
         _characterPreview.x = this.width/2;
         _characterPreview.y = 500;
         addChild(_characterPreview);
+        _responsive = true;
 
         loadLevel(level);
 
@@ -88,7 +98,10 @@ public class GameBoard extends Sprite {
         _movesTextField= new TextField(100, 50, " Moves : " + _moves, "Verdana", 20, 0xFFFFFF, true);
         _movesTextField.x = _characterPreview.x - 300;
         _movesTextField.y = _characterPreview.y;
+        _currentLevel = level;
+
         addChild(_movesTextField);
+
     }
 
     private function onSequencerStep(bar:int):void {
@@ -143,6 +156,7 @@ public class GameBoard extends Sprite {
     }
 
     private function onTileTouch(event:TileTouchEvent):void {
+        if(! _responsive) return;
         var tile:Tile = event.target as Tile;
         if (tile is EmptyTile)
         {
@@ -174,11 +188,53 @@ public class GameBoard extends Sprite {
     }
 
     private function WinGame():void {
-        
+        _responsive = false;
+        var starScreen:Button = new Button(StartUp.assets.getTexture("Star1"));
+        starScreen.pivotX = starScreen.width/2;
+        starScreen.pivotY = starScreen.height/2;
+        var localPoint:Point =
+                this.globalToLocal(new Point(Starling.current.viewPort.width/2, Starling.current.viewPort.height/2));
+        starScreen.x = localPoint.x;
+        starScreen.y =  localPoint.y;
+        starScreen.addEventListener(Event.TRIGGERED, NextLevel);
+
+
+        addChild(starScreen);
+    }
+
+    private function NextLevel(event:Event):void {
+        event.target.removeEventListener(TouchEvent.TOUCH, Restart);
+        event.stopPropagation();
+        event.stopImmediatePropagation();
+        if (_currentLevel <= 2)
+        {
+            (parent as Game).showLevel(_currentLevel+1);
+            sBeats.changeSound(1);
+        }
+
     }
 
     private function GameOver():void {
+        _responsive = false;
+        var gameOver:Button = new Button(StartUp.assets.getTexture("GameOver"));
+        gameOver.pivotX = gameOver.width/2;
+        gameOver.pivotY = gameOver.height/2;
+        var localPoint:Point =
+                this.globalToLocal(new Point(Starling.current.viewPort.width/2, Starling.current.viewPort.height/2));
+        gameOver.x = localPoint.x;
+        gameOver.y = localPoint.y;
+        gameOver.addEventListener(Event.TRIGGERED, Restart);
 
+
+        addChild(gameOver);
+
+    }
+
+    private function Restart(event:Event):void {
+        event.target.removeEventListener(TouchEvent.TOUCH, Restart);
+        event.stopPropagation();
+        event.stopImmediatePropagation();
+        (parent as Game).showMenu();
     }
 
     private function CheckGameWon():Boolean {

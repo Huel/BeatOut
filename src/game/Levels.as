@@ -14,13 +14,13 @@ public class Levels {
             new Array(),
 
             // level 1
-            new Array(new Point(2,2), new Point(6,3)),
+            new Array(new Point(2,3), new Point(6,2)),
 
             // level 2
-            new Array(new Point(1,2), new Point(5,2), new Point(8,1)),
+            new Array(new Point(1,3), new Point(5,3), new Point(8,4)),
 
             // level 3
-            new Array(new Point(1,1), new Point(2,3), new Point(3,1),new Point(5,2), new Point(8,1) )
+            new Array(new Point(1,4), new Point(2,2), new Point(3,4),new Point(5,2), new Point(8,4) )
 
     );
 

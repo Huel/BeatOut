@@ -43,7 +43,7 @@ public class Game extends Sprite
         quitButton.addEventListener(Event.TRIGGERED, showMenu);
     }
 
-    private function showMenu(event:Event):void
+    public function showMenu(event:Event=null):void
     {
         removeBoard();
         addChild(startButton);
@@ -52,14 +52,21 @@ public class Game extends Sprite
 
     private function showGame(event:Event):void
     {
-        createGameBoard();
+        createGameBoard(1);
         removeChild(startButton);
         addChild(quitButton);
     }
 
-    public function createGameBoard():void
+    public function showLevel(level:int):void
     {
-        theBoard = new GameBoard(3);
+        removeBoard();
+        createGameBoard(level);
+    }
+
+
+    public function createGameBoard(level:int):void
+    {
+        theBoard = new GameBoard(level);
         theBoard.pivotX = theBoard.width/2;
         theBoard.pivotY = theBoard.height/2;
 

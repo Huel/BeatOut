@@ -59,6 +59,9 @@ package
             [Embed(source="/../assets/textures/3stars.png")]
             public static const Star3:Class;
 
+            [Embed(source="/../assets/textures/GameOver.png")]
+            public static const GameOver:Class;
+
 
 
         //Audio
