@@ -9,11 +9,12 @@ package
 {
 
 import flash.filesystem.File;
+import flash.media.SoundChannel;
 
 import starling.core.Starling;
 import starling.display.Image;
 import starling.display.Sprite;
-import starling.text.TextField;
+
 import starling.utils.AssetManager;
 
 import utils.ProgressBar;
@@ -51,8 +52,11 @@ public class StartUp extends Sprite
         splashScreen.y = 0;
         addChild(splashScreen);
 
+        var splashSound:SoundChannel = assets.playSound("SplashSound");
+
         Starling.juggler.delayCall(function():void
         {
+
             loadGame();
             trace("loadgame");
         }, 2);

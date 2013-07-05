@@ -74,5 +74,8 @@ package
             [Embed(source="/../assets/audio/BeatOut4.mp3")]
             public static const Beat1_4:Class;
 
+            [Embed(source="/../assets/audio/splash.mp3")]
+            public static const SplashSound:Class;
+
 	}
 }
